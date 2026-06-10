@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICON-TechD 2026 — International Conference on Technology and Design</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Noto Serif', 'Georgia', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        math: { 50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',300:'#93c5fd',400:'#60a5fa',500:'#3b82f6',600:'#2563eb',700:'#1d4ed8',800:'#1e40af',900:'#1e3a8a' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body{font-family:'Inter',sans-serif;color:#1e293b}
+        .font-serif{font-family:'Noto Serif',Georgia,serif}
+        .graph-paper{background-image:linear-gradient(rgba(30,64,175,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(30,64,175,.04) 1px,transparent 1px);background-size:24px 24px}
+        .graph-hero{background-image:linear-gradient(rgba(30,64,175,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(30,64,175,.06) 1px,transparent 1px);background-size:24px 24px}
+        .graph-subtle{background-image:linear-gradient(rgba(30,64,175,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(30,64,175,.025) 1px,transparent 1px);background-size:24px 24px}
+        .leading-loose{line-height:1.85}
+        .hero-circle{animation:hfloat 8s ease-in-out infinite}
+        .hc2{animation-delay:-2s}.hc3{animation-delay:-4s}.hc4{animation-delay:-6s}
+        @keyframes hfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
+        @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+        .anim-up{animation:fadeUp .8s cubic-bezier(.16,1,.3,1) forwards;opacity:0}
+        .d1{animation-delay:.1s}.d2{animation-delay:.2s}.d3{animation-delay:.3s}.d4{animation-delay:.4s}.d5{animation-delay:.5s}
+        .tl-line{background:linear-gradient(to bottom,#dbeafe,#2563eb,#dbeafe)}
+        .track-card{transition:transform .4s ease,box-shadow .4s ease}
+        .track-card:hover{transform:translateY(-6px);box-shadow:0 20px 60px -15px rgba(0,0,0,.1)}
+        .ctab{transition:all .3s ease;cursor:pointer}
+        .ctab.active{background:#2563eb;color:#fff;box-shadow:0 4px 15px -3px rgba(37,99,235,.4)}
+        .stab{transition:all .3s ease;cursor:pointer}
+        .stab.active{background:#2563eb;color:#fff;box-shadow:0 4px 15px -3px rgba(37,99,235,.4)}
+        .nav-scrolled{background:rgba(255,255,255,.95)!important;backdrop-filter:blur(20px);box-shadow:0 1px 20px rgba(0,0,0,.06)}
+        .cd-box{background:rgba(255,255,255,.8);backdrop-filter:blur(10px)}
+        .sec-vis{animation:fadeUp .8s cubic-bezier(.16,1,.3,1) forwards}
+        .faq-ans{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s ease}
+        .faq-ans.open{max-height:300px}
+        .faq-chev{transition:transform .3s ease}
+        .faq-chev.open{transform:rotate(180deg)}
+        ::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:#f1f5f9}::-webkit-scrollbar-thumb{background:#93c5fd;border-radius:3px}::-webkit-scrollbar-thumb:hover{background:#3b82f6}
+    </style>
+</head>
+<body class="bg-white graph-subtle antialiased">
+
+<!-- ========== NAVIGATION ========== -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="flex items-center justify-between h-18 lg:h-20">
+            <a href="#home" class="flex items-center gap-2.5 shrink-0">
+                <div class="w-9 h-9 bg-math-600 rounded-lg flex items-center justify-center"><span class="text-white font-serif font-bold text-base">I</span></div>
+                <div class="leading-none">
+                    <span class="font-serif font-bold text-math-800 text-base tracking-tight">ICON-TechD</span>
+                    <span class="text-math-400 font-medium text-base ml-0.5">2026</span>
+                </div>
+            </a>
+            <div class="hidden xl:flex items-center gap-5 lg:gap-6">
+                <a href="#home" class="text-[13px] font-medium text-gray-600 hover:text-math-600 transition-colors">Home</a>
+                <a href="#cfp" class="text-[13px] font-medium text-gray-600 hover:text-math-600 transition-colors">Call for Papers</a>
+                <a href="#committee" class="text-[13px] font-medium text-gray-600 hover:text-math-600 transition-colors">Committees</a>
+                <a href="#submission" class="text-[13px] font-medium text-gray-600 hover:text-math-600 transition-colors">Submission & Registration</a>
+                <a href="#speakers" class="text-[13px] font-medium text-gray-600 hover:text-math-600 transition-colors">Speakers</a>
+                <a href="#program" class="text-[13px] font-medium text-gray-600 hover:text-math-600 transition-colors">Program</a>
+                <a href="#venue" class="text-[13px] font-medium text-gray-600 hover:text-math-600 transition-colors">Venue</a>
+                <a href="#downloads" class="text-[13px] font-medium text-gray-600 hover:text-math-600 transition-colors">Downloads</a>
+                <a href="#faq" class="text-[13px] font-medium text-gray-600 hover:text-math-600 transition-colors">FAQ</a>
+                <a href="#contact" class="text-[13px] font-medium text-gray-600 hover:text-math-600 transition-colors">Contact</a>
+            </div>
+            <a href="#registration" class="hidden xl:inline-flex items-center gap-1.5 bg-math-600 text-white text-[13px] font-semibold px-5 py-2 rounded-lg hover:bg-math-700 transition-colors shadow-md shadow-math-600/20">Register</a>
+            <button id="mobBtn" class="xl:hidden p-2 text-gray-600 hover:text-math-600 transition-colors"><span class="iconify w-6 h-6" data-icon="lucide:menu"></span></button>
+        </div>
+    </div>
+    <div id="mobMenu" class="hidden xl:hidden bg-white/95 backdrop-blur-xl border-t border-gray-100 shadow-xl max-h-[80vh] overflow-y-auto">
+        <div class="px-5 py-3 space-y-0.5">
+            <a href="#home" class="mob-link block py-2.5 text-sm font-medium text-gray-600 hover:text-math-600 hover:bg-math-50/50 px-3 rounded-lg">Home</a>
+            <a href="#cfp" class="mob-link block py-2.5 text-sm font-medium text-gray-600 hover:text-math-600 hover:bg-math-50/50 px-3 rounded-lg">Call for Papers</a>
+            <a href="#committee" class="mob-link block py-2.5 text-sm font-medium text-gray-600 hover:text-math-600 hover:bg-math-50/50 px-3 rounded-lg">Committees</a>
+            <a href="#submission" class="mob-link block py-2.5 text-sm font-medium text-gray-600 hover:text-math-600 hover:bg-math-50/50 px-3 rounded-lg">Submission & Registration</a>
+            <a href="#speakers" class="mob-link block py-2.5 text-sm font-medium text-gray-600 hover:text-math-600 hover:bg-math-50/50 px-3 rounded-lg">Speakers</a>
+            <a href="#program" class="mob-link block py-2.5 text-sm font-medium text-gray-600 hover:text-math-600 hover:bg-math-50/50 px-3 rounded-lg">Program & Schedule</a>
+            <a href="#venue" class="mob-link block py-2.5 text-sm font-medium text-gray-600 hover:text-math-600 hover:bg-math-50/50 px-3 rounded-lg">Venue</a>
+            <a href="#downloads" class="mob-link block py-2.5 text-sm font-medium text-gray-600 hover:text-math-600 hover:bg-math-50/50 px-3 rounded-lg">Downloads Center</a>
+            <a href="#faq" class="mob-link block py-2.5 text-sm font-medium text-gray-600 hover:text-math-600 hover:bg-math-50/50 px-3 rounded-lg">FAQ</a>
+            <a href="#contact" class="mob-link block py-2.5 text-sm font-medium text-gray-600 hover:text-math-600 hover:bg-math-50/50 px-3 rounded-lg">Contact</a>
+            <a href="#registration" class="block text-center bg-math-600 text-white text-sm font-semibold px-5 py-2.5 rounded-lg mt-2">Register Now</a>
+        </div>
+    </div>
+</nav>
+
+<!-- ========== §1 HERO ========== -->
+<section id="home" class="min-h-screen flex items-center relative overflow-hidden graph-hero bg-gradient-to-br from-white via-math-50/30 to-white">
+    <div class="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-full hidden lg:block pointer-events-none">
+        <div class="hero-circle absolute right-16 top-16 w-72 h-72 rounded-full bg-math-100/60 border border-math-200/40"></div>
+        <div class="hero-circle hc2 absolute right-48 top-40 w-52 h-52 rounded-full bg-emerald-50/50 border border-emerald-200/40"></div>
+        <div class="hero-circle hc3 absolute right-8 bottom-20 w-64 h-64 rounded-full bg-amber-50/40 border border-amber-200/30"></div>
+        <div class="hero-circle hc4 absolute right-36 bottom-32 w-36 h-36 rounded-full bg-violet-50/40 border border-violet-200/30"></div>
+        <div class="absolute right-28 top-1/3 w-3 h-3 rounded-full bg-math-400/60"></div>
+        <div class="absolute right-56 bottom-1/3 w-2 h-2 rounded-full bg-emerald-400/60"></div>
+        <div class="absolute right-20 bottom-1/4 w-2.5 h-2.5 rounded-full bg-amber-400/60"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-32 lg:py-0 w-full">
+        <div class="max-w-2xl relative z-10">
+            <div class="anim-up">
+                <div class="inline-flex items-center gap-2 bg-math-50 border border-math-200/60 rounded-full px-4 py-1.5 mb-7">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span class="text-xs font-semibold text-math-700 tracking-wider uppercase">Call for Papers Open</span>
+                </div>
+            </div>
+            <h1 class="anim-up d1 font-serif text-5xl sm:text-6xl lg:text-7xl font-bold text-math-900 tracking-tight leading-[1.1] mb-3">ICON-TechD <span class="text-math-500">2026</span></h1>
+            <p class="anim-up d2 font-serif text-lg sm:text-xl text-gray-500 leading-relaxed mb-1" style="letter-spacing:.02em">International Conference on Technology and Design</p>
+            <p class="anim-up d2 text-sm sm:text-base text-gray-400 font-medium leading-relaxed max-w-xl mt-3 mb-8">Empowering Creative Intelligence: Harmonizing Technology, Design, and Human Expression in the AI Era</p>
+            <div class="anim-up d3 flex flex-wrap items-center gap-3 sm:gap-4 text-sm text-gray-500 mb-9">
+                <span class="flex items-center gap-1.5"><span class="iconify w-4 h-4 text-math-500" data-icon="lucide:calendar"></span>November 18–19, 2026</span>
+                <span class="w-1 h-1 rounded-full bg-gray-300"></span>
+                <span class="flex items-center gap-1.5"><span class="iconify w-4 h-4 text-math-500" data-icon="lucide:map-pin"></span>Malang, Indonesia</span>
+                <span class="w-1 h-1 rounded-full bg-gray-300"></span>
+                <span class="flex items-center gap-1.5"><span class="iconify w-4 h-4 text-math-500" data-icon="lucide:monitor"></span>Virtual Conference</span>
+            </div>
+            <div class="anim-up d4 flex flex-wrap gap-3">
+                <a href="#submission" class="inline-flex items-center gap-2 bg-math-600 text-white font-semibold px-7 py-3.5 rounded-lg hover:bg-math-700 transition-all shadow-lg shadow-math-600/25 hover:-translate-y-0.5 text-sm"><span class="iconify w-4 h-4" data-icon="lucide:file-text"></span>Submit Paper</a>
+                <a href="#registration" class="inline-flex items-center gap-2 bg-white text-math-700 font-semibold px-7 py-3.5 rounded-lg border border-gray-200 hover:border-math-300 hover:bg-math-50/50 transition-all hover:-translate-y-0.5 text-sm">Register Now</a>
+            </div>
+            <div class="anim-up d5 mt-12">
+                <p class="text-[10px] font-semibold text-gray-400 uppercase tracking-widest mb-3">Conference Countdown</p>
+                <div class="flex gap-2.5" id="countdown">
+                    <div class="cd-box rounded-xl px-4 py-2.5 border border-gray-100 text-center min-w-[64px]"><div class="text-xl font-bold text-math-800 font-serif" id="cd-d">000</div><div class="text-[9px] font-semibold text-gray-400 uppercase tracking-wider mt-0.5">Days</div></div>
+                    <div class="cd-box rounded-xl px-4 py-2.5 border border-gray-100 text-center min-w-[64px]"><div class="text-xl font-bold text-math-800 font-serif" id="cd-h">00</div><div class="text-[9px] font-semibold text-gray-400 uppercase tracking-wider mt-0.5">Hours</div></div>
+                    <div class="cd-box rounded-xl px-4 py-2.5 border border-gray-100 text-center min-w-[64px]"><div class="text-xl font-bold text-math-800 font-serif" id="cd-m">00</div><div class="text-[9px] font-semibold text-gray-400 uppercase tracking-wider mt-0.5">Mins</div></div>
+                    <div class="cd-box rounded-xl px-4 py-2.5 border border-gray-100 text-center min-w-[64px]"><div class="text-xl font-bold text-math-800 font-serif" id="cd-s">00</div><div class="text-[9px] font-semibold text-gray-400 uppercase tracking-wider mt-0.5">Secs</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0"><svg viewBox="0 0 1440 50" fill="none"><path d="M0 50V25C360 0 720 0 1080 25C1260 37.5 1440 37.5 1440 25V50H0Z" fill="white"/></svg></div>
+</section>
+
+<!-- ========== §2 ABOUT ========== -->
+<section id="about" class="py-24 lg:py-28 bg-white scroll-sec">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+            <div>
+                <p class="text-xs font-bold text-math-500 uppercase tracking-[.2em] mb-4">About the Conference</p>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-gray-900 leading-[1.15] tracking-tight mb-7">Where Technology<br>Meets <span class="text-math-600">Design</span></h2>
+                <div class="space-y-4 text-gray-600 leading-loose text-[15px]">
+                    <p>ICON-TechD 2026 is the inaugural International Conference on Technology and Design, organized by the Faculty of Technology and Design at Institut Teknologi dan Bisnis ASIA Malang, Indonesia.</p>
+                    <p>This conference brings together researchers, practitioners, and academicians from three distinct yet interconnected disciplines — <strong class="text-gray-800">Informatics</strong>, <strong class="text-gray-800">Computer Systems</strong>, and <strong class="text-gray-800">Visual Communication Design</strong> — to explore the convergence of computation and creativity.</p>
+                    <p>As a fully virtual conference, ICON-TechD 2026 welcomes participants from around the globe to join online and share cutting-edge research, innovative design practices, and emerging technologies that shape our digital future.</p>
+                </div>
+                <div class="grid grid-cols-4 gap-4 mt-9 pt-7 border-t border-gray-100">
+                    <div><div class="text-2xl font-serif font-bold text-math-600">3</div><div class="text-[10px] text-gray-400 font-medium mt-0.5">Tracks</div></div>
+                    <div><div class="text-2xl font-serif font-bold text-math-600">4+</div><div class="text-[10px] text-gray-400 font-medium mt-0.5">Countries</div></div>
+                    <div><div class="text-2xl font-serif font-bold text-math-600">2</div><div class="text-[10px] text-gray-400 font-medium mt-0.5">Days</div></div>
+                    <div><div class="text-2xl font-serif font-bold text-math-600">1st</div><div class="text-[10px] text-gray-400 font-medium mt-0.5">Edition</div></div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl shadow-math-900/10">
+                    <img src="https://picsum.photos/seed/icontechd-about2/800/600.jpg" alt="Conference" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute -bottom-5 -left-5 bg-white rounded-xl shadow-lg shadow-gray-200/50 p-4 border border-gray-100">
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 bg-math-50 rounded-lg flex items-center justify-center"><span class="iconify w-4 h-4 text-math-600" data-icon="lucide:building-2"></span></div>
+                        <div><p class="text-[10px] text-gray-400 font-medium">Organized by</p><p class="text-xs font-semibold text-gray-800">FTD — ITB ASIA Malang</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== §3 IMPORTANT DATES ========== -->
+<section id="dates" class="py-24 lg:py-28 bg-gray-50/70 graph-paper scroll-sec">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+            <p class="text-xs font-bold text-math-500 uppercase tracking-[.2em] mb-4">Timeline</p>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight mb-3">Important Dates</h2>
+            <p class="text-gray-500 leading-loose text-[15px]">Key milestones leading up to the conference.</p>
+        </div>
+        <div class="relative max-w-3xl mx-auto">
+            <div class="absolute left-5 sm:left-7 top-0 bottom-0 w-px tl-line"></div>
+            <div class="relative flex gap-5 sm:gap-7 mb-10">
+                <div class="relative z-10 w-10 h-10 sm:w-14 sm:h-14 bg-math-600 rounded-full flex items-center justify-center shrink-0 shadow-lg shadow-math-600/20"><span class="text-white font-serif font-bold text-[10px] sm:text-xs leading-none text-center">Jul<br class="sm:hidden"> 1</span></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100 shadow-sm flex-1 mt-0.5 sm:mt-1.5">
+                    <h3 class="font-serif font-bold text-gray-900 text-base mb-1">Call for Papers Opens</h3>
+                    <p class="text-sm text-gray-500">July 1, 2026 — Official flyer release, OJS portal live, submission begins.</p>
+                </div>
+            </div>
+            <div class="relative flex gap-5 sm:gap-7 mb-10">
+                <div class="relative z-10 w-10 h-10 sm:w-14 sm:h-14 bg-math-500 rounded-full flex items-center justify-center shrink-0 shadow-lg shadow-math-500/20"><span class="text-white font-serif font-bold text-[10px] sm:text-xs leading-none text-center">Aug<br class="sm:hidden"> 31</span></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100 shadow-sm flex-1 mt-0.5 sm:mt-1.5">
+                    <h3 class="font-serif font-bold text-gray-900 text-base mb-1">Submission Deadline</h3>
+                    <p class="text-sm text-gray-500">August 31, 2026 — Abstract & full paper submission deadline. Review process begins.</p>
+                </div>
+            </div>
+            <div class="relative flex gap-5 sm:gap-7 mb-10">
+                <div class="relative z-10 w-10 h-10 sm:w-14 sm:h-14 bg-emerald-500 rounded-full flex items-center justify-center shrink-0 shadow-lg shadow-emerald-500/20"><span class="text-white font-serif font-bold text-[10px] sm:text-xs leading-none text-center">Sep<br class="sm:hidden"> 30</span></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100 shadow-sm flex-1 mt-0.5 sm:mt-1.5">
+                    <h3 class="font-serif font-bold text-gray-900 text-base mb-1">Notification of Acceptance</h3>
+                    <p class="text-sm text-gray-500">September 30, 2026 — Authors receive acceptance or revision notification.</p>
+                </div>
+            </div>
+            <div class="relative flex gap-5 sm:gap-7 mb-10">
+                <div class="relative z-10 w-10 h-10 sm:w-14 sm:h-14 bg-amber-500 rounded-full flex items-center justify-center shrink-0 shadow-lg shadow-amber-500/20"><span class="text-white font-serif font-bold text-[10px] sm:text-xs leading-none text-center">Oct<br class="sm:hidden"> 25</span></div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100 shadow-sm flex-1 mt-0.5 sm:mt-1.5">
+                    <h3 class="font-serif font-bold text-gray-900 text-base mb-1">Camera-Ready & Registration Deadline</h3>
+                    <p class="text-sm text-gray-500">October 25, 2026 — Final paper submission, payment, and registration close. Schedule finalized.</p>
+                </div>
+            </div>
+            <div class="relative flex gap-5 sm:gap-7">
+                <div class="relative z-10 w-10 h-10 sm:w-14 sm:h-14 bg-gray-900 rounded-full flex items-center justify-center shrink-0 shadow-lg shadow-gray-900/20 ring-4 ring-math-100"><span class="text-white font-serif font-bold text-[10px] sm:text-xs leading-none text-center">Nov<br class="sm:hidden"> 14–15</span></div>
+                <div class="bg-math-600 rounded-xl p-5 shadow-lg shadow-math-600/20 flex-1 mt-0.5 sm:mt-1.5">
+                    <h3 class="font-serif font-bold text-white text-base mb-1">Conference Days — November 18–19, 2026</h3>
+                    <p class="text-sm text-math-100">Fully virtual. Plenary, keynote, and parallel sessions via Zoom. Closing ceremony.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== §4 KEYNOTE SPEAKERS ========== -->
+<section id="speakers" class="py-24 lg:py-28 bg-white scroll-sec">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+            <p class="text-xs font-bold text-math-500 uppercase tracking-[.2em] mb-4">Keynote Speakers</p>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight mb-3">Learn from the Best</h2>
+            <p class="text-gray-500 leading-loose text-[15px]">Distinguished scholars from four nations will share insights on technology and design.</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-100">
+                <div class="aspect-[4/3] bg-math-50 flex items-center justify-center relative"><span class="iconify w-16 h-16 text-math-200" data-icon="lucide:user-circle-2"></span><div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm rounded-full px-2.5 py-0.5 text-[10px] font-bold text-math-600 uppercase tracking-wider">Indonesia</div></div>
+                <div class="p-5"><h3 class="font-serif font-bold text-gray-400 text-sm">To Be Announced</h3><p class="text-math-400 text-xs font-medium mt-1">Prominent Speaker from Indonesia</p></div>
+            </div>
+            <div class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-100">
+                <div class="aspect-[4/3] bg-emerald-50 flex items-center justify-center relative"><span class="iconify w-16 h-16 text-emerald-200" data-icon="lucide:user-circle-2"></span><div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm rounded-full px-2.5 py-0.5 text-[10px] font-bold text-emerald-600 uppercase tracking-wider">Malaysia</div></div>
+                <div class="p-5"><h3 class="font-serif font-bold text-gray-400 text-sm">To Be Announced</h3><p class="text-emerald-400 text-xs font-medium mt-1">Prominent Speaker from Malaysia</p></div>
+            </div>
+            <div class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-100">
+                <div class="aspect-[4/3] bg-amber-50 flex items-center justify-center relative"><span class="iconify w-16 h-16 text-amber-200" data-icon="lucide:user-circle-2"></span><div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm rounded-full px-2.5 py-0.5 text-[10px] font-bold text-amber-600 uppercase tracking-wider">Philippines</div></div>
+                <div class="p-5"><h3 class="font-serif font-bold text-gray-400 text-sm">To Be Announced</h3><p class="text-amber-400 text-xs font-medium mt-1">Prominent Speaker from the Philippines</p></div>
+            </div>
+            <div class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-100">
+                <div class="aspect-[4/3] bg-violet-50 flex items-center justify-center relative"><span class="iconify w-16 h-16 text-violet-200" data-icon="lucide:user-circle-2"></span><div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm rounded-full px-2.5 py-0.5 text-[10px] font-bold text-violet-600 uppercase tracking-wider">Taiwan</div></div>
+                <div class="p-5"><h3 class="font-serif font-bold text-gray-400 text-sm">To Be Announced</h3><p class="text-violet-400 text-xs font-medium mt-1">Prominent Speaker from Taiwan</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== §5 CALL FOR PAPERS ========== -->
+<section id="cfp" class="py-24 lg:py-28 bg-gray-50/70 graph-paper scroll-sec">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+            <p class="text-xs font-bold text-math-500 uppercase tracking-[.2em] mb-4">Call for Papers</p>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight mb-3">Scope & Tracks</h2>
+            <p class="text-gray-500 leading-loose text-[15px]">ICON-TechD 2026 invites lecturers, researchers, and students to submit original research addressing topics within three curated tracks.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6 lg:gap-7">
+            <div class="track-card bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm">
+                <div class="h-2 bg-gradient-to-r from-math-400 to-math-600"></div>
+                <div class="p-7">
+                    <div class="w-12 h-12 bg-math-50 rounded-xl flex items-center justify-center mb-5"><span class="iconify w-6 h-6 text-math-600" data-icon="lucide:brain-circuit"></span></div>
+                    <h3 class="font-serif text-lg font-bold text-gray-900 mb-1">Track 1</h3>
+                    <p class="text-math-600 font-semibold text-sm mb-5">Informatics & Intelligent Systems</p>
+                    <ul class="space-y-2.5 text-sm text-gray-500 leading-relaxed">
+                        <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-math-400 mt-1.5 shrink-0"></span>Natural Language Processing (NLP) & Text Mining</li>
+                        <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-math-400 mt-1.5 shrink-0"></span>Artificial Intelligence & Machine Learning Applications</li>
+                        <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-math-400 mt-1.5 shrink-0"></span>Data Science & Big Data Analytics</li>
+                        <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-math-400 mt-1.5 shrink-0"></span>Web and Mobile Technology</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="track-card bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm">
+                <div class="h-2 bg-gradient-to-r from-emerald-400 to-emerald-600"></div>
+                <div class="p-7">
+                    <div class="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center mb-5"><span class="iconify w-6 h-6 text-emerald-600" data-icon="lucide:cpu"></span></div>
+                    <h3 class="font-serif text-lg font-bold text-gray-900 mb-1">Track 2</h3>
+                    <p class="text-emerald-600 font-semibold text-sm mb-5">Computer Systems & Interactive Technology</p>
+                    <ul class="space-y-2.5 text-sm text-gray-500 leading-relaxed">
+                        <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 shrink-0"></span>Internet of Things (IoT) & Embedded Systems</li>
+                        <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 shrink-0"></span>Computer Networks & Cyber Security</li>
+                        <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 shrink-0"></span>Human-Computer Interaction (HCI) & Multimodal Experience</li>
+                        <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 shrink-0"></span>Robotics and Automation Systems</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="track-card bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm">
+                <div class="h-2 bg-gradient-to-r from-amber-400 to-amber-600"></div>
+                <div class="p-7">
+                    <div class="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center mb-5"><span class="iconify w-6 h-6 text-amber-600" data-icon="lucide:palette"></span></div>
+                    <h3 class="font-serif text-lg font-bold text-gray-900 mb-1">Track 3</h3>
+                    <p class="text-amber-600 font-semibold text-sm mb-5">Visual Communication & Creative Design</p>
+                    <ul class="space-y-2.5 text-sm text-gray-500 leading-relaxed">
+                        <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-amber-400 mt-1.5 shrink-0"></span>Digital Arts, Animation, and Visual Effects</li>
+                        <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-amber-400 mt-1.5 shrink-0"></span>UI/UX Design & Spatial Design Trends</li>
+                        <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-amber-400 mt-1.5 shrink-0"></span>Branding, Creative Media, and Advertising</li>
+                        <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-amber-400 mt-1.5 shrink-0"></span>Cultural & Local Flavor Preservation in Digital Media</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Publication Output -->
+        <div class="mt-14 max-w-4xl mx-auto">
+            <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
+                <h3 class="font-serif font-bold text-gray-900 text-lg mb-3 flex items-center gap-2"><span class="iconify w-5 h-5 text-math-500" data-icon="lucide:book-open"></span>Publication Output</h3>
+                <p class="text-sm text-gray-600 leading-relaxed mb-5">All accepted and presented papers will be published in the ICON-TechD 2026 Conference Proceedings (with ISBN). Selected high-quality papers may be recommended for publication in partner SINTA-accredited journals or international journals (Scopus/WoS indexed), subject to additional review processes.</p>
+                <div class="grid sm:grid-cols-3 gap-4">
+                    <div class="bg-math-50/50 rounded-lg p-4 text-center border border-math-100/60"><span class="iconify w-6 h-6 text-math-500 mx-auto mb-2" data-icon="lucide:book-open"></span><p class="text-xs font-semibold text-gray-700">Conference Proceedings</p><p class="text-[10px] text-gray-400 mt-0.5">With ISBN</p></div>
+                    <div class="bg-emerald-50/50 rounded-lg p-4 text-center border border-emerald-100/60"><span class="iconify w-6 h-6 text-emerald-500 mx-auto mb-2" data-icon="lucide:file-badge"></span><p class="text-xs font-semibold text-gray-700">SINTA Journals</p><p class="text-[10px] text-gray-400 mt-0.5">Partner journals</p></div>
+                    <div class="bg-amber-50/50 rounded-lg p-4 text-center border border-amber-100/60"><span class="iconify w-6 h-6 text-amber-500 mx-auto mb-2" data-icon="lucide:globe-2"></span><p class="text-xs font-semibold text-gray-700">International Journals</p><p class="text-[10px] text-gray-400 mt-0.5">Scopus/WoS targets</p></div>
+                </div>
+                <p class="text-center text-xs text-gray-400 mt-4 italic">Publication partners will be officially announced as agreements are finalized.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== §6 PROGRAM & SCHEDULE ========== -->
+<section id="program" class="py-24 lg:py-28 bg-white scroll-sec">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+            <p class="text-xs font-bold text-math-500 uppercase tracking-[.2em] mb-4">Program</p>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight mb-3">Conference Schedule</h2>
+            <p class="text-gray-500 leading-loose text-[15px]">Two days of keynote addresses and parallel paper presentations — all sessions via Zoom.</p>
+        </div>
+        <div class="flex justify-center gap-2.5 mb-9">
+            <button class="stab active text-sm font-semibold px-5 py-2 rounded-lg border border-gray-200 text-gray-600" data-sday="d1">Day 1 — Nov 14</button>
+            <button class="stab text-sm font-semibold px-5 py-2 rounded-lg border border-gray-200 text-gray-600" data-sday="d2">Day 2 — Nov 15</button>
+        </div>
+        <!-- Day 1 -->
+        <div id="sch-d1" class="sch-con max-w-4xl mx-auto">
+            <div class="space-y-0">
+                <div class="flex gap-4 sm:gap-6 py-4 border-b border-gray-100"><div class="w-[72px] sm:w-24 shrink-0 text-xs font-mono font-semibold text-math-600 pt-0.5">08:00–08:30</div><div><h4 class="font-semibold text-gray-900 text-sm">Participant Check-in</h4><p class="text-xs text-gray-400 mt-0.5">Zoom lobby opens</p></div></div>
+                <div class="flex gap-4 sm:gap-6 py-4 border-b border-gray-100 bg-math-50/30 -mx-3 px-3 sm:-mx-5 sm:px-5 rounded-lg"><div class="w-[72px] sm:w-24 shrink-0 text-xs font-mono font-semibold text-math-600 pt-0.5">08:30–09:00</div><div><span class="text-[10px] font-bold text-math-600 uppercase tracking-wider bg-math-100 px-2 py-0.5 rounded">Opening</span><h4 class="font-semibold text-gray-900 text-sm mt-1">Opening Ceremony</h4><p class="text-xs text-gray-500 mt-0.5">Welcome speech by Rector, Dean of FTD, and General Chair</p></div></div>
+                <div class="flex gap-4 sm:gap-6 py-4 border-b border-gray-100 bg-math-50/30 -mx-3 px-3 sm:-mx-5 sm:px-5 rounded-lg"><div class="w-[72px] sm:w-24 shrink-0 text-xs font-mono font-semibold text-math-600 pt-0.5">09:00–09:45</div><div><div class="flex items-center gap-2 mb-1"><span class="text-[10px] font-bold text-gray-600 uppercase tracking-wider bg-gray-100 px-2 py-0.5 rounded">Keynote 1</span></div><h4 class="font-semibold text-gray-900 text-sm">Keynote Address 1</h4><p class="text-xs text-gray-400 mt-0.5">Speaker to be announced — Indonesia</p></div></div>
+                <div class="flex gap-4 sm:gap-6 py-4 border-b border-gray-100 bg-math-50/30 -mx-3 px-3 sm:-mx-5 sm:px-5 rounded-lg"><div class="w-[72px] sm:w-24 shrink-0 text-xs font-mono font-semibold text-math-600 pt-0.5">09:45–10:30</div><div><div class="flex items-center gap-2 mb-1"><span class="text-[10px] font-bold text-gray-600 uppercase tracking-wider bg-gray-100 px-2 py-0.5 rounded">Keynote 2</span></div><h4 class="font-semibold text-gray-900 text-sm">Keynote Address 2</h4><p class="text-xs text-gray-400 mt-0.5">Speaker to be announced — Malaysia</p></div></div>
+                <div class="flex gap-4 sm:gap-6 py-4 border-b border-gray-100"><div class="w-[72px] sm:w-24 shrink-0 text-xs font-mono font-semibold text-gray-400 pt-0.5">10:30–11:00</div><div><h4 class="font-semibold text-gray-400 text-sm">Break</h4></div></div>
+                <div class="flex gap-4 sm:gap-6 py-4 border-b border-gray-100"><div class="w-[72px] sm:w-24 shrink-0 text-xs font-mono font-semibold text-math-600 pt-0.5">11:00–12:30</div><div><span class="text-[10px] font-bold text-math-600 uppercase tracking-wider bg-math-100 px-2 py-0.5 rounded">Parallel I</span><div class="grid sm:grid-cols-3 gap-2.5 mt-2"><div class="bg-math-50/50 rounded-lg p-3 border border-math-100/60"><p class="text-[10px] font-bold text-math-600 uppercase">Zoom Room 1 — Track 1</p><p class="text-xs text-gray-500 mt-0.5">Informatics Papers</p></div><div class="bg-emerald-50/50 rounded-lg p-3 border border-emerald-100/60"><p class="text-[10px] font-bold text-emerald-600 uppercase">Zoom Room 2 — Track 2</p><p class="text-xs text-gray-500 mt-0.5">Comp. Systems Papers</p></div><div class="bg-amber-50/50 rounded-lg p-3 border border-amber-100/60"><p class="text-[10px] font-bold text-amber-600 uppercase">Zoom Room 3 — Track 3</p><p class="text-xs text-gray-500 mt-0.5">VCD Papers</p></div></div></div></div>
+                <div class="flex gap-4 sm:gap-6 py-4 border-b border-gray-100"><div class="w-[72px] sm:w-24 shrink-0 text-xs font-mono font-semibold text-gray-400 pt-0.5">12:30–13:30</div><div><h4 class="font-semibold text-gray-400 text-sm">Lunch Break</h4></div></div>
+                <div class="flex gap-4 sm:gap-6 py-4"><div class="w-[72px] sm:w-24 shrink-0 text-xs font-mono font-semibold text-math-600 pt-0.5">13:30–15:30</div><div><span class="text-[10px] font-bold text-math-600 uppercase tracking-wider bg-math-100 px-2 py-0.5 rounded">Parallel II</span><div class="grid sm:grid-cols-3 gap-2.5 mt-2"><div class="bg-math-50/50 rounded-lg p-3 border border-math-100/60"><p class="text-[10px] font-bold text-math-600 uppercase">Zoom Room 1 — Track 1</p><p class="text-xs text-gray-500 mt-0.5">Informatics Papers</p></div><div class="bg-emerald-50/50 rounded-lg p-3 border border-emerald-100/60"><p class="text-[10px] font-bold text-emerald-600 uppercase">Zoom Room 2 — Track 2</p><p class="text-xs text-gray-500 mt-0.5">Comp. Systems Papers</p></div><div class="bg-amber-50/50 rounded-lg p-3 border border-amber-100/60"><p class="text-[10px] font-bold text-amber-600 uppercase">Zoom Room 3 — Track 3</p><p class="text-xs text-gray-500 mt-0.5">VCD Papers</p></div></div></div></div>
+            </div>
+        </div>
+        <!-- Day 2 -->
+        <div id="sch-d2" class="sch-con hidden max-w-4xl mx-auto">
+            <div class="space-y-0">
+                <div class="flex gap-4 sm:gap-6 py-4 border-b border-gray-100"><div class="w-[72px] sm:w-24 shrink-0 text-xs font-mono font-semibold text-math-600 pt-0.5">08:30–09:00</div><div><h4 class="font-semibold text-gray-900 text-sm">Zoom Lobby Opens (Day 2)</h4></div></div>
+                <div class="flex gap-4 sm:gap-6 py-4 border-b border-gray-100 bg-math-50/30 -mx-3 px-3 sm:-mx-5 sm:px-5 rounded-lg"><div class="w-[72px] sm:w-24 shrink-0 text-xs font-mono font-semibold text-math-600 pt-0.5">09:00–09:45</div><div><span class="text-[10px] font-bold text-gray-600 uppercase tracking-wider bg-gray-100 px-2 py-0.5 rounded">Keynote 3</span><h4 class="font-semibold text-gray-900 text-sm mt-1">Keynote Address 3</h4><p class="text-xs text-gray-400 mt-0.5">Speaker to be announced — Philippines</p></div></div>
+                <div class="flex gap-4 sm:gap-6 py-4 border-b border-gray-100 bg-math-50/30 -mx-3 px-3 sm:-mx-5 sm:px-5 rounded-lg"><div class="w-[72px] sm:w-24 shrink-0 text-xs font-mono font-semibold text-math-600 pt-0.5">09:45–10:30</div><div><span class="text-[10px] font-bold text-gray-600 uppercase tracking-wider bg-gray-100 px-2 py-0.5 rounded">Keynote 4</span><h4 class="font-semibold text-gray-900 text-sm mt-1">Keynote Address 4</h4><p class="text-xs text-gray-400 mt-0.5">Speaker to be announced — Taiwan</p></div></div>
+                <div class="flex gap-4 sm:gap-6 py-4 border-b border-gray-100"><div class="w-[72px] sm:w-24 shrink-0 text-xs font-mono font-semibold text-gray-400 pt-0.5">10:30–11:00</div><div><h4 class="font-semibold text-gray-400 text-sm">Break</h4></div></div>
+                <div class="flex gap-4 sm:gap-6 py-4 border-b border-gray-100"><div class="w-[72px] sm:w-24 shrink-0 text-xs font-mono font-semibold text-math-600 pt-0.5">11:00–12:30</div><div><span class="text-[10px] font-bold text-math-600 uppercase tracking-wider bg-math-100 px-2 py-0.5 rounded">Parallel III</span><div class="grid sm:grid-cols-3 gap-2.5 mt-2"><div class="bg-math-50/50 rounded-lg p-3 border border-math-100/60"><p class="text-[10px] font-bold text-math-600 uppercase">Zoom Room 1 — Track 1</p><p class="text-xs text-gray-500 mt-0.5">Informatics Papers</p></div><div class="bg-emerald-50/50 rounded-lg p-3 border border-emerald-100/60"><p class="text-[10px] font-bold text-emerald-600 uppercase">Zoom Room 2 — Track 2</p><p class="text-xs text-gray-500 mt-0.5">Comp. Systems Papers</p></div><div class="bg-amber-50/50 rounded-lg p-3 border border-amber-100/60"><p class="text-[10px] font-bold text-amber-600 uppercase">Zoom Room 3 — Track 3</p><p class="text-xs text-gray-500 mt-0.5">VCD Papers</p></div></div></div></div>
+                <div class="flex gap-4 sm:gap-6 py-4 border-b border-gray-100"><div class="w-[72px] sm:w-24 shrink-0 text-xs font-mono font-semibold text-gray-400 pt-0.5">12:30–13:30</div><div><h4 class="font-semibold text-gray-400 text-sm">Lunch Break</h4></div></div>
+                <div class="flex gap-4 sm:gap-6 py-4 bg-math-50/30 -mx-3 px-3 sm:-mx-5 sm:px-5 rounded-lg"><div class="w-[72px] sm:w-24 shrink-0 text-xs font-mono font-semibold text-math-600 pt-0.5">13:30–15:00</div><div><span class="text-[10px] font-bold text-math-600 uppercase tracking-wider bg-math-100 px-2 py-0.5 rounded">Parallel IV</span><div class="grid sm:grid-cols-3 gap-2.5 mt-2"><div class="bg-math-50/50 rounded-lg p-3 border border-math-100/60"><p class="text-[10px] font-bold text-math-600 uppercase">Zoom Room 1 — Track 1</p><p class="text-xs text-gray-500 mt-0.5">Informatics Papers</p></div><div class="bg-emerald-50/50 rounded-lg p-3 border border-emerald-100/60"><p class="text-[10px] font-bold text-emerald-600 uppercase">Zoom Room 2 — Track 2</p><p class="text-xs text-gray-500 mt-0.5">Comp. Systems Papers</p></div><div class="bg-amber-50/50 rounded-lg p-3 border border-amber-100/60"><p class="text-[10px] font-bold text-amber-600 uppercase">Zoom Room 3 — Track 3</p><p class="text-xs text-gray-500 mt-0.5">VCD Papers</p></div></div></div></div>
+                <div class="flex gap-4 sm:gap-6 py-4 bg-math-600 rounded-xl mt-3 -mx-3 px-3 sm:-mx-5 sm:px-5"><div class="w-[72px] sm:w-24 shrink-0 text-xs font-mono font-semibold text-white pt-0.5">15:00–16:00</div><div><span class="text-[10px] font-bold text-math-200 uppercase tracking-wider bg-math-500 px-2 py-0.5 rounded">Closing</span><h4 class="font-semibold text-white text-sm mt-1">Closing Ceremony</h4><p class="text-xs text-math-200 mt-0.5">Closing remarks and certificate distribution</p></div></div>
+            </div>
+        </div>
+        <!-- Presentation Guidelines -->
+        <div class="max-w-4xl mx-auto mt-8">
+            <div class="bg-amber-50/60 border border-amber-200/50 rounded-xl p-5 flex items-start gap-3">
+                <span class="iconify w-5 h-5 text-amber-600 mt-0.5 shrink-0" data-icon="lucide:info"></span>
+                <div><h4 class="font-semibold text-gray-900 text-sm mb-1">Presentation Guidelines</h4><ul class="text-xs text-gray-600 leading-relaxed space-y-0.5"><li>• Each presenter: <strong>10 minutes</strong> presentation + <strong>5 minutes</strong> Q&A via Zoom.</li><li>• Use the official ICON-TechD 2026 PowerPoint template (see Downloads Center).</li><li>• All presenters must join via Zoom with screen sharing enabled.</li><li>• A technical rehearsal session will be held in October 2026.</li><li>• Poster presentation option is available upon request — contact the committee.</li></ul></div>
+            </div>
+        </div>
+        <!-- Accepted Papers Placeholder -->
+        <div class="max-w-4xl mx-auto mt-8">
+            <div class="bg-gray-50/50 rounded-xl border border-gray-100 p-10 text-center">
+                <span class="iconify w-10 h-10 text-gray-300 mx-auto mb-3" data-icon="lucide:file-stack"></span>
+                <h3 class="font-serif font-bold text-gray-400 text-base mb-1">Accepted Papers</h3>
+                <p class="text-xs text-gray-400 max-w-md mx-auto">The list of accepted papers will be published after the review process. Check back after September 2026.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== §7 COMMITTEES ========== -->
+<section id="committee" class="py-24 lg:py-28 bg-gray-50/70 graph-paper scroll-sec">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+            <p class="text-xs font-bold text-math-500 uppercase tracking-[.2em] mb-4">Committees</p>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight mb-3">Organizing Committee</h2>
+            <p class="text-gray-500 leading-loose text-[15px]">A dedicated team from three programs working together to deliver an exceptional conference.</p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-2 mb-10">
+            <button class="ctab active text-sm font-semibold px-4 py-2 rounded-lg border border-gray-200 text-gray-600" data-ct="steering">Steering</button>
+            <button class="ctab text-sm font-semibold px-4 py-2 rounded-lg border border-gray-200 text-gray-600" data-ct="advisory">Int'l Advisory</button>
+            <button class="ctab text-sm font-semibold px-4 py-2 rounded-lg border border-gray-200 text-gray-600" data-ct="technical">Technical Program</button>
+            <button class="ctab text-sm font-semibold px-4 py-2 rounded-lg border border-gray-200 text-gray-600" data-ct="secretariat">Secretariat & OJS</button>
+            <button class="ctab text-sm font-semibold px-4 py-2 rounded-lg border border-gray-200 text-gray-600" data-ct="creative">Creative & Event</button>
+            <button class="ctab text-sm font-semibold px-4 py-2 rounded-lg border border-gray-200 text-gray-600" data-ct="sponsor">Sponsor & Partnership</button>
+        </div>
+        <!-- Steering -->
+        <div id="ct-steering" class="ct-con">
+            <div class="grid sm:grid-cols-3 gap-5 max-w-3xl mx-auto">
+                <div class="text-center p-6 rounded-xl bg-white border border-gray-100"><div class="w-16 h-16 rounded-full bg-math-100 mx-auto mb-3 flex items-center justify-center"><span class="iconify w-7 h-7 text-math-500" data-icon="lucide:shield-check"></span></div><h4 class="font-serif font-bold text-gray-900 text-sm">Risa Santoso, B.A, M.Ed</h4></div>
+                <div class="text-center p-6 rounded-xl bg-white border border-gray-100"><div class="w-16 h-16 rounded-full bg-math-100 mx-auto mb-3 flex items-center justify-center"><span class="iconify w-7 h-7 text-math-500" data-icon="lucide:shield-check"></span></div><h4 class="font-serif font-bold text-gray-900 text-sm">Dr. Fathorrahman, S.E., M.M</h4></div>
+                <div class="text-center p-6 rounded-xl bg-white border border-gray-100"><div class="w-16 h-16 rounded-full bg-math-100 mx-auto mb-3 flex items-center justify-center"><span class="iconify w-7 h-7 text-math-500" data-icon="lucide:shield-check"></span></div><h4 class="font-serif font-bold text-gray-900 text-sm">Handry Rochmad Dwi Happy, S.Sn., M.Sn.</h4><p class="text-math-600 text-xs font-medium mt-1">Dean, FTD</p></div>
+            </div>
+        </div>
+        <!-- International Advisory -->
+        <div id="ct-advisory" class="ct-con hidden">
+            <div class="bg-white rounded-2xl border border-gray-100 p-7 max-w-4xl mx-auto">
+                <p class="text-sm text-gray-500 leading-relaxed mb-5">The International Advisory Board comprises distinguished scholars from partner institutions across four countries, ensuring the conference meets international academic standards.</p>
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <div class="flex items-center gap-3 p-4 rounded-lg bg-gray-50/50 border border-gray-100"><div class="w-10 h-10 rounded-full bg-violet-100 flex items-center justify-center shrink-0 text-xs font-bold text-violet-600">TW</div><div><p class="text-sm font-semibold text-gray-800">Philip Faster E.A, S.Pd, M.Kom, Ph.D</p><p class="text-xs text-gray-400">Taiwan</p></div></div>
+                    <div class="flex items-center gap-3 p-4 rounded-lg bg-gray-50/50 border border-gray-100"><div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center shrink-0 text-xs font-bold text-emerald-600">MY</div><div><p class="text-sm font-semibold text-gray-800">Nur Lailatul Aqormy, S.S., M.A</p><p class="text-xs text-gray-400">Malaysia / Philippines</p></div></div>
+                    <div class="flex items-center gap-3 p-4 rounded-lg bg-gray-50/50 border border-gray-100"><div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center shrink-0 text-xs font-bold text-amber-600">PH</div><div><p class="text-sm font-semibold text-gray-800">Siti Nurul, S.Si, M.Si</p><p class="text-xs text-gray-400">Malaysia / Philippines</p></div></div>
+                    <div class="flex items-center gap-3 p-4 rounded-lg bg-gray-50/50 border border-gray-100 border-dashed"><div class="w-10 h-10 rounded-full bg-math-100 flex items-center justify-center shrink-0 text-xs font-bold text-math-600">ID</div><div><p class="text-sm font-medium text-gray-400 italic">Keynote Speaker — Indonesia</p><p class="text-xs text-gray-300">To be announced</p></div></div>
+                    <div class="flex items-center gap-3 p-4 rounded-lg bg-gray-50/50 border border-gray-100 border-dashed"><div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center shrink-0 text-xs font-bold text-emerald-600">MY</div><div><p class="text-sm font-medium text-gray-400 italic">Keynote Speaker — Malaysia</p><p class="text-xs text-gray-300">To be announced</p></div></div>
+                    <div class="flex items-center gap-3 p-4 rounded-lg bg-gray-50/50 border border-gray-100 border-dashed"><div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center shrink-0 text-xs font-bold text-amber-600">PH</div><div><p class="text-sm font-medium text-gray-400 italic">Keynote Speaker — Philippines</p><p class="text-xs text-gray-300">To be announced</p></div></div>
+                    <div class="flex items-center gap-3 p-4 rounded-lg bg-gray-50/50 border border-gray-100 border-dashed"><div class="w-10 h-10 rounded-full bg-violet-100 flex items-center justify-center shrink-0 text-xs font-bold text-violet-600">TW</div><div><p class="text-sm font-medium text-gray-400 italic">Keynote Speaker — Taiwan</p><p class="text-xs text-gray-300">To be announced</p></div></div>
+                </div>
+            </div>
+        </div>
+        <!-- Technical Program -->
+        <div id="ct-technical" class="ct-con hidden">
+            <div class="bg-math-50/50 border border-math-100 rounded-xl p-5 mb-7 text-center max-w-4xl mx-auto"><p class="text-[10px] font-bold text-math-500 uppercase tracking-widest mb-1">Coordinator</p><h4 class="font-serif font-bold text-gray-900">Dr. Danang Arbian Sulistyo</h4></div>
+            <div class="grid sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <div><div class="flex items-center gap-2 mb-3"><div class="w-2.5 h-2.5 rounded-full bg-math-500"></div><h4 class="font-serif font-bold text-math-800 text-sm">Track 1 — Informatics</h4></div><div class="space-y-2.5"><div class="bg-white rounded-lg p-3.5 border border-gray-100"><p class="text-sm font-medium text-gray-800">Fadhli Almu'iini Ahda, S.Kom, M.Kom</p></div><div class="bg-white rounded-lg p-3.5 border border-gray-100"><p class="text-sm font-medium text-gray-800">Achmad Noercholis, S.T, M.T</p></div><div class="bg-white rounded-lg p-3.5 border border-gray-100"><p class="text-sm font-medium text-gray-800">Titania Dwi Andini, S.Kom., M.Kom.</p></div></div></div>
+                <div><div class="flex items-center gap-2 mb-3"><div class="w-2.5 h-2.5 rounded-full bg-emerald-500"></div><h4 class="font-serif font-bold text-emerald-800 text-sm">Track 2 — Comp. Systems</h4></div><div class="space-y-2.5"><div class="bg-white rounded-lg p-3.5 border border-gray-100"><p class="text-sm font-medium text-gray-800">Samsul Arifin, ST., MT.</p></div><div class="bg-white rounded-lg p-3.5 border border-gray-100"><p class="text-sm font-medium text-gray-800">Mufidatul Islamiyah, S.Si., MT.</p></div><div class="bg-white rounded-lg p-3.5 border border-gray-100"><p class="text-sm font-medium text-gray-800">Dr. Lilis Widayanti, S.Pd, M.Pd</p></div></div></div>
+                <div><div class="flex items-center gap-2 mb-3"><div class="w-2.5 h-2.5 rounded-full bg-amber-500"></div><h4 class="font-serif font-bold text-amber-800 text-sm">Track 3 — VCD</h4></div><div class="space-y-2.5"><div class="bg-white rounded-lg p-3.5 border border-gray-100"><p class="text-sm font-medium text-gray-800">Faldi Hendrawan, S.Pd, M.A.</p></div><div class="bg-white rounded-lg p-3.5 border border-gray-100"><p class="text-sm font-medium text-gray-800">Yogi Widya Saka Warsa, S.Sn, M.Sn</p></div><div class="bg-white rounded-lg p-3.5 border border-gray-100"><p class="text-sm font-medium text-gray-800">Nicholaus Wayong Kabelen, S.Sn, M.Sn</p></div></div></div>
+            </div>
+        </div>
+        <!-- Secretariat -->
+        <div id="ct-secretariat" class="ct-con hidden">
+            <div class="bg-emerald-50/50 border border-emerald-100 rounded-xl p-5 mb-7 text-center max-w-4xl mx-auto"><p class="text-[10px] font-bold text-emerald-500 uppercase tracking-widest mb-1">Coordinator</p><h4 class="font-serif font-bold text-gray-900">Philip Faster E.A, S.Pd, M.Kom, Ph.D</h4></div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-4xl mx-auto">
+                <div class="text-center p-5 rounded-xl bg-white border border-gray-100"><div class="w-14 h-14 rounded-full bg-emerald-100 mx-auto mb-3 flex items-center justify-center"><span class="iconify w-6 h-6 text-emerald-500" data-icon="lucide:file-check"></span></div><p class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest mb-1">Manuscript</p><h4 class="font-serif font-bold text-gray-900 text-sm">Suastika Yulia Riska, S.Pd., M.Kom</h4></div>
+                <div class="text-center p-5 rounded-xl bg-white border border-gray-100"><div class="w-14 h-14 rounded-full bg-emerald-100 mx-auto mb-3 flex items-center justify-center"><span class="iconify w-6 h-6 text-emerald-500" data-icon="lucide:scan-search"></span></div><p class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest mb-1">Plagiarism</p><h4 class="font-serif font-bold text-gray-900 text-sm">Dr. Vivi Aida Fitria, S.Si, M.Si</h4></div>
+                <div class="text-center p-5 rounded-xl bg-white border border-gray-100"><div class="w-14 h-14 rounded-full bg-emerald-100 mx-auto mb-3 flex items-center justify-center"><span class="iconify w-6 h-6 text-emerald-500" data-icon="lucide:mail-check"></span></div><p class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest mb-1">Correspondence</p><h4 class="font-serif font-bold text-gray-900 text-sm">Lely Surya, S.Pd., M.Pd.</h4></div>
+                <div class="text-center p-5 rounded-xl bg-white border border-gray-100"><div class="w-14 h-14 rounded-full bg-emerald-100 mx-auto mb-3 flex items-center justify-center"><span class="iconify w-6 h-6 text-emerald-500" data-icon="lucide:layout-list"></span></div><p class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest mb-1">Administration</p><h4 class="font-serif font-bold text-gray-900 text-sm">Jaenal Arifin, S.Kom, M.M., M.Kom</h4></div>
+            </div>
+        </div>
+        <!-- Creative -->
+        <div id="ct-creative" class="ct-con hidden">
+            <div class="grid sm:grid-cols-3 gap-5 max-w-4xl mx-auto">
+                <div class="text-center p-6 rounded-xl bg-white border border-gray-100"><div class="w-14 h-14 rounded-full bg-amber-100 mx-auto mb-3 flex items-center justify-center"><span class="iconify w-6 h-6 text-amber-500" data-icon="lucide:pen-tool"></span></div><p class="text-[10px] font-bold text-amber-600 uppercase tracking-widest mb-1">Branding & Visual</p><h4 class="font-serif font-bold text-gray-900 text-sm">Abdulloh Eizzi Irsyada, S.Kom, M.Ds</h4></div>
+                <div class="text-center p-6 rounded-xl bg-white border border-gray-100"><div class="w-14 h-14 rounded-full bg-amber-100 mx-auto mb-3 flex items-center justify-center"><span class="iconify w-6 h-6 text-amber-500" data-icon="lucide:layout-template"></span></div><p class="text-[10px] font-bold text-amber-600 uppercase tracking-widest mb-1">Multimedia & Cert.</p><h4 class="font-serif font-bold text-gray-900 text-sm">Sean Elbert Jeremiah, S.Sn., M.Pd</h4></div>
+                <div class="text-center p-6 rounded-xl bg-white border border-gray-100"><div class="w-14 h-14 rounded-full bg-amber-100 mx-auto mb-3 flex items-center justify-center"><span class="iconify w-6 h-6 text-amber-500" data-icon="lucide:clapperboard"></span></div><p class="text-[10px] font-bold text-amber-600 uppercase tracking-widest mb-1">Event & Rundown</p><h4 class="font-serif font-bold text-gray-900 text-xs leading-snug">Nur Lailatul Aqormy, S.S., M.A<br>Sean Elbert Jeremiah, S.Sn., M.Pd<br>Nadien Adha Safira, S.Pd.</h4></div>
+            </div>
+        </div>
+        <!-- Sponsor -->
+        <div id="ct-sponsor" class="ct-con hidden">
+            <div class="bg-violet-50/50 border border-violet-100 rounded-xl p-5 mb-7 text-center max-w-4xl mx-auto"><p class="text-[10px] font-bold text-violet-500 uppercase tracking-widest mb-1">PIC</p><h4 class="font-serif font-bold text-gray-900">Ida Wahyuni, S.Kom, M.Kom, Ph.D</h4></div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 max-w-5xl mx-auto">
+                <div class="bg-white rounded-lg p-3.5 border border-gray-100 text-center"><p class="text-sm font-medium text-gray-800">Handry Rochmad Dwi Happy, S.Sn., M.Sn.</p></div>
+                <div class="bg-white rounded-lg p-3.5 border border-gray-100 text-center"><p class="text-sm font-medium text-gray-800">Dr. Danang Arbian Sulistyo</p></div>
+                <div class="bg-white rounded-lg p-3.5 border border-gray-100 text-center"><p class="text-sm font-medium text-gray-800">Azwar Riza Habibi, S.Si, M.Si</p></div>
+                <div class="bg-white rounded-lg p-3.5 border border-gray-100 text-center"><p class="text-sm font-medium text-gray-800">Lukman Hakim, S.Si, M.Si</p></div>
+                <div class="bg-white rounded-lg p-3.5 border border-gray-100 text-center"><p class="text-sm font-medium text-gray-800">Fransiska Sisilia Mukti, S.T, M.T</p></div>
+                <div class="bg-white rounded-lg p-3.5 border border-gray-100 text-center"><p class="text-sm font-medium text-gray-800">Moh Zainuddin, S.Si, M.Kom</p></div>
+                <div class="bg-white rounded-lg p-3.5 border border-gray-100 text-center"><p class="text-sm font-medium text-gray-800">Dr. Puji Subekti, S.Si, M.Si</p></div>
+                <div class="bg-white rounded-lg p-3.5 border border-gray-100 text-center"><p class="text-sm font-medium text-gray-800">Rina Dewi Indahsari, S.Kom, M.Kom</p></div>
+                <div class="bg-white rounded-lg p-3.5 border border-gray-100 text-center"><p class="text-sm font-medium text-gray-800">Setyorini, S.Kom, M.M.</p></div>
+                <div class="bg-white rounded-lg p-3.5 border border-gray-100 text-center"><p class="text-sm font-medium text-gray-800">Dr. Sunu Jatmika, S.Kom, M.Kom</p></div>
+                <div class="bg-white rounded-lg p-3.5 border border-gray-100 text-center"><p class="text-sm font-medium text-gray-800">Dr. Tri Wahyuni, S.Pd, M.Pd</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== §8 REGISTRATION CTA ========== -->
+<section id="registration" class="py-16 lg:py-20 bg-math-600 relative overflow-hidden scroll-sec">
+    <div class="absolute inset-0 opacity-10"><div class="absolute -top-20 -right-20 w-96 h-96 rounded-full border-2 border-white"></div><div class="absolute -bottom-10 -left-10 w-64 h-64 rounded-full border-2 border-white"></div></div>
+    <div class="max-w-4xl mx-auto px-5 lg:px-8 text-center relative z-10">
+        <p class="text-xs font-bold text-math-200 uppercase tracking-[.2em] mb-3">Registration Portal</p>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white tracking-tight mb-3">Register for ICON-TechD 2026</h2>
+        <p class="text-math-100 leading-loose text-[15px] max-w-xl mx-auto mb-8">Secure your spot at the inaugural ICON-TechD conference. Early registration is recommended.</p>
+        <div class="flex flex-wrap justify-center gap-3">
+            <a href="#" class="inline-flex items-center gap-2 bg-white text-math-700 font-semibold px-7 py-3.5 rounded-lg hover:bg-math-50 transition-colors shadow-lg text-sm"><span class="iconify w-5 h-5" data-icon="lucide:user-plus"></span>Register as Presenter</a>
+            <a href="#" class="inline-flex items-center gap-2 bg-math-700 text-white font-semibold px-7 py-3.5 rounded-lg hover:bg-math-800 transition-colors border border-math-500 text-sm"><span class="iconify w-5 h-5" data-icon="lucide:eye"></span>Register as Observer</a>
+        </div>
+    </div>
+</section>
+
+<!-- ========== §9 SUBMISSION & REGISTRATION ========== -->
+<section id="submission" class="py-24 lg:py-28 bg-white scroll-sec">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-14 items-start">
+            <div>
+                <p class="text-xs font-bold text-math-500 uppercase tracking-[.2em] mb-4">Submission & Registration</p>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight mb-5">Submit Your Research</h2>
+                <div class="space-y-4 text-gray-600 leading-loose text-[15px] mb-8">
+                    <p>ICON-TechD 2026 invites researchers, academicians, practitioners, and students to submit original, unpublished papers.</p>
+                    <p>All submissions undergo double-blind peer review by the International Scientific Committee.</p>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex items-start gap-3 bg-gray-50/50 rounded-xl p-4 border border-gray-100"><div class="w-9 h-9 bg-math-50 rounded-lg flex items-center justify-center shrink-0"><span class="text-math-600 font-serif font-bold text-sm">1</span></div><div><h4 class="font-semibold text-gray-900 text-sm mb-0.5">Prepare Manuscript</h4><p class="text-gray-500 text-xs leading-relaxed">Download the paper template and format accordingly.</p></div></div>
+                    <div class="flex items-start gap-3 bg-gray-50/50 rounded-xl p-4 border border-gray-100"><div class="w-9 h-9 bg-math-50 rounded-lg flex items-center justify-center shrink-0"><span class="text-math-600 font-serif font-bold text-sm">2</span></div><div><h4 class="font-semibold text-gray-900 text-sm mb-0.5">Submit via OJS</h4><p class="text-gray-500 text-xs leading-relaxed">Create an account and submit to the appropriate track.</p></div></div>
+                    <div class="flex items-start gap-3 bg-gray-50/50 rounded-xl p-4 border border-gray-100"><div class="w-9 h-9 bg-math-50 rounded-lg flex items-center justify-center shrink-0"><span class="text-math-600 font-serif font-bold text-sm">3</span></div><div><h4 class="font-semibold text-gray-900 text-sm mb-0.5">Peer Review</h4><p class="text-gray-500 text-xs leading-relaxed">Reviewed by at least two independent reviewers.</p></div></div>
+                    <div class="flex items-start gap-3 bg-gray-50/50 rounded-xl p-4 border border-gray-100"><div class="w-9 h-9 bg-math-50 rounded-lg flex items-center justify-center shrink-0"><span class="text-math-600 font-serif font-bold text-sm">4</span></div><div><h4 class="font-semibold text-gray-900 text-sm mb-0.5">Present & Publish</h4><p class="text-gray-500 text-xs leading-relaxed">Present virtually and get published in partner proceedings/journals.</p></div></div>
+                </div>
+            </div>
+            <div class="space-y-5">
+                <div class="bg-gray-50/50 rounded-2xl border border-gray-100 overflow-hidden">
+                    <div class="p-5 border-b border-gray-100"><h3 class="font-serif font-bold text-gray-900 text-base">Submission Guidelines</h3></div>
+                    <div class="p-5 space-y-3">
+                        <div class="flex items-start gap-2.5"><span class="iconify w-4 h-4 text-math-500 mt-0.5 shrink-0" data-icon="lucide:file-text"></span><div><p class="text-sm font-medium text-gray-800">Paper Format</p><p class="text-xs text-gray-500">Single-column format (ICON-TechD template)</p></div></div>
+                        <div class="flex items-start gap-2.5"><span class="iconify w-4 h-4 text-math-500 mt-0.5 shrink-0" data-icon="lucide:type"></span><div><p class="text-sm font-medium text-gray-800">Page Limit</p><p class="text-xs text-gray-500">20–24 pages in single-column format (including references), approximately equivalent to 10–12 pages in double-column layout</p></div></div>
+                        <div class="flex items-start gap-2.5"><span class="iconify w-4 h-4 text-math-500 mt-0.5 shrink-0" data-icon="lucide:languages"></span><div><p class="text-sm font-medium text-gray-800">Language</p><p class="text-xs text-gray-500">English only</p></div></div>
+                        <div class="flex items-start gap-2.5"><span class="iconify w-4 h-4 text-math-500 mt-0.5 shrink-0" data-icon="lucide:shield-alert"></span><div><p class="text-sm font-medium text-gray-800">Originality</p><p class="text-xs text-gray-500">Similarity index below 20% (checked via Turnitin)</p></div></div>
+                        <div class="flex items-start gap-2.5"><span class="iconify w-4 h-4 text-math-500 mt-0.5 shrink-0" data-icon="lucide:eye-off"></span><div><p class="text-sm font-medium text-gray-800">Review</p><p class="text-xs text-gray-500">Double-blind, ≥2 reviewers</p></div></div>
+                    </div>
+                </div>
+                <div class="bg-gray-50/50 rounded-2xl border border-gray-100 overflow-hidden">
+                    <div class="p-5 border-b border-gray-100"><h3 class="font-serif font-bold text-gray-900 text-base">Registration Fees</h3></div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm">
+                            <thead><tr class="border-b border-gray-100"><th class="text-left py-3 px-4 text-xs font-semibold text-gray-500">Category</th><th class="text-center py-3 px-3 text-xs font-semibold text-gray-500">IDR</th><th class="text-center py-3 px-3 text-xs font-semibold text-gray-500">USD</th></tr></thead>
+                            <tbody class="divide-y divide-gray-50">
+                                <tr class="hover:bg-math-50/30"><td class="py-3 px-4 text-xs font-medium text-gray-700">Co-Host (5 Papers)</td><td class="text-center py-3 px-3 text-xs font-bold text-math-600">1.500.000</td><td class="text-center py-3 px-3 text-xs text-gray-300">—</td></tr>
+                                <tr class="hover:bg-math-50/30"><td class="py-3 px-4 text-xs font-medium text-gray-700">Lecturer / Researcher</td><td class="text-center py-3 px-3 text-xs font-bold text-gray-800">400K–500K</td><td class="text-center py-3 px-3 text-xs font-bold text-gray-800">$50</td></tr>
+                                <tr class="hover:bg-math-50/30"><td class="py-3 px-4 text-xs font-medium text-gray-700">Ext. Student</td><td class="text-center py-3 px-3 text-xs font-bold text-gray-800">300.000</td><td class="text-center py-3 px-3 text-xs font-bold text-gray-800">$35</td></tr>
+                                <tr class="hover:bg-math-50/30 bg-math-50/20"><td class="py-3 px-4 text-xs font-medium text-gray-700">Internal ASIA Student</td><td class="text-center py-3 px-3 text-xs font-bold text-math-600">200.000</td><td class="text-center py-3 px-3 text-xs text-gray-300">—</td></tr>
+                                <tr class="hover:bg-math-50/30"><td class="py-3 px-4 text-xs font-medium text-gray-700">Non-Presenter</td><td class="text-center py-3 px-3 text-xs font-bold text-gray-800">75.000</td><td class="text-center py-3 px-3 text-xs font-bold text-gray-800">$10</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="px-4 py-3 border-t border-gray-100"><p class="text-[10px] text-gray-400 text-center">Presenter fees include e-certificate and proceedings access.</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== §10 SPONSORS & PARTNERS ========== -->
+<section id="sponsors" class="py-24 lg:py-28 bg-gray-50/70 graph-paper scroll-sec">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+            <p class="text-xs font-bold text-math-500 uppercase tracking-[.2em] mb-4">Sponsors & Partners</p>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight mb-3">Our Supporting Partners</h2>
+        </div>
+        <div class="space-y-10 max-w-5xl mx-auto">
+            <div><p class="text-[10px] font-bold text-math-600 uppercase tracking-widest mb-4 text-center">Host Institution</p><div class="flex justify-center"><div class="bg-white rounded-xl border border-gray-100 px-12 py-6 flex items-center justify-center h-24 w-64 text-center"><div><span class="iconify w-8 h-8 text-math-300 mx-auto" data-icon="lucide:building-2"></span><p class="text-xs text-gray-400 mt-2 font-medium">ITB ASIA Malang</p><p class="text-[10px] text-gray-300">Faculty of Technology & Design</p></div></div></div></div>
+            <div><p class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest mb-4 text-center">Co-Host Institutions</p><div class="grid grid-cols-2 sm:grid-cols-4 gap-3"><div class="bg-white rounded-xl border border-gray-100 p-5 flex items-center justify-center h-20"><span class="iconify w-7 h-7 text-gray-300" data-icon="lucide:building-2"></span></div><div class="bg-white rounded-xl border border-gray-100 p-5 flex items-center justify-center h-20"><span class="iconify w-7 h-7 text-gray-300" data-icon="lucide:building-2"></span></div><div class="bg-white rounded-xl border border-gray-100 p-5 flex items-center justify-center h-20"><span class="iconify w-7 h-7 text-gray-300" data-icon="lucide:building-2"></span></div><div class="bg-math-50 rounded-xl border-2 border-dashed border-math-200 p-5 flex items-center justify-center h-20 cursor-pointer hover:bg-math-100/50 transition-colors"><div class="text-center"><span class="iconify w-6 h-6 text-math-300 mx-auto" data-icon="lucide:plus-circle"></span><p class="text-[10px] text-math-400 mt-1 font-semibold">Become a Partner</p></div></div></div></div>
+            <div><p class="text-[10px] font-bold text-amber-600 uppercase tracking-widest mb-4 text-center">Publication Partners</p><div class="grid grid-cols-3 gap-3"><div class="bg-white rounded-xl border border-gray-100 p-5 flex items-center justify-center h-20"><span class="iconify w-7 h-7 text-gray-300" data-icon="lucide:book-open"></span></div><div class="bg-white rounded-xl border border-gray-100 p-5 flex items-center justify-center h-20"><span class="iconify w-7 h-7 text-gray-300" data-icon="lucide:file-badge"></span></div><div class="bg-white rounded-xl border border-gray-100 p-5 flex items-center justify-center h-20"><span class="iconify w-7 h-7 text-gray-300" data-icon="lucide:globe-2"></span></div></div></div>
+        </div>
+        <div class="text-center mt-8"><a href="#downloads" class="inline-flex items-center gap-1.5 text-sm font-semibold text-math-600 hover:text-math-700 transition-colors"><span class="iconify w-4 h-4" data-icon="lucide:download"></span>Download Co-Host Proposal</a></div>
+    </div>
+</section>
+
+<!-- ========== §11 VENUE (Reframed for Virtual) ========== -->
+<section id="venue" class="py-24 lg:py-28 bg-white scroll-sec">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+            <p class="text-xs font-bold text-math-500 uppercase tracking-[.2em] mb-4">Organizing Institution</p>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight mb-3">About the Host</h2>
+            <p class="text-gray-500 leading-loose text-[15px]">ICON-TechD 2026 is organized from Institut Teknologi dan Bisnis ASIA Malang, located in the scenic highland city of Malang, East Java.</p>
+        </div>
+        <div class="max-w-4xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-gray-200 relative shadow-lg">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.9!2d112.6331!3d-7.9666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78802b23e4b3b3%3A0x3c0e2e7e0e0e0e0e!2sInstitut%20Teknologi%20%26%20Bisnis%20ASIA!5e0!3m2!1sen!2sid!4v1" width="100%" height="100%" style="border:0" allowfullscreen loading="lazy" class="absolute inset-0"></iframe>
+                </div>
+                <div class="space-y-5">
+                    <div class="bg-gray-50/50 rounded-xl p-5 border border-gray-100">
+                        <div class="flex items-center gap-2.5 mb-3"><div class="w-9 h-9 bg-math-50 rounded-lg flex items-center justify-center"><span class="iconify w-4 h-4 text-math-600" data-icon="lucide:building-2"></span></div><h3 class="font-serif font-bold text-gray-900 text-sm">Institution</h3></div>
+                        <p class="text-sm text-gray-600 leading-relaxed">Institut Teknologi dan Bisnis ASIA<br>Jl. Soekarno Hatta Rembuksari No. 1A<br>Malang, East Java, Indonesia</p>
+                    </div>
+                    <div class="bg-math-50/50 rounded-xl p-5 border border-math-100">
+                        <div class="flex items-center gap-2.5 mb-3"><div class="w-9 h-9 bg-math-100 rounded-lg flex items-center justify-center"><span class="iconify w-4 h-4 text-math-600" data-icon="lucide:monitor"></span></div><h3 class="font-serif font-bold text-gray-900 text-sm">Conference Platform</h3></div>
+                        <p class="text-sm text-gray-600 leading-relaxed">All sessions will be conducted via <strong class="text-gray-800">Zoom Meeting</strong>. Registered participants will receive unique Zoom links prior to the conference dates.</p>
+                    </div>
+                    <div class="bg-emerald-50/50 rounded-xl p-5 border border-emerald-100">
+                        <div class="flex items-center gap-2.5 mb-3"><div class="w-9 h-9 bg-emerald-100 rounded-lg flex items-center justify-center"><span class="iconify w-4 h-4 text-emerald-600" data-icon="lucide:globe"></span></div><h3 class="font-serif font-bold text-gray-900 text-sm">About Malang</h3></div>
+                        <p class="text-sm text-gray-600 leading-relaxed">Known as the "City of Education," Malang is home to dozens of universities. Located at ~440m above sea level, it enjoys a cool tropical climate year-round, surrounded by mountains and tea plantations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== §12 DOWNLOADS CENTER ========== -->
+<section id="downloads" class="py-24 lg:py-28 bg-gray-50/70 graph-paper scroll-sec">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+            <p class="text-xs font-bold text-math-500 uppercase tracking-[.2em] mb-4">Downloads</p>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight mb-3">Downloads Center</h2>
+            <p class="text-gray-500 leading-loose text-[15px]">All essential documents for authors and partners in one place.</p>
+        </div>
+        <div class="max-w-2xl mx-auto bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+            <div class="divide-y divide-gray-50">
+                <a href="#" class="flex items-center gap-4 p-4 hover:bg-math-50/30 transition-colors group"><div class="w-10 h-10 bg-red-50 rounded-lg flex items-center justify-center shrink-0"><span class="iconify w-5 h-5 text-red-500" data-icon="lucide:file-image"></span></div><div class="flex-1 min-w-0"><p class="text-sm font-semibold text-gray-800 group-hover:text-math-600 transition-colors">Conference Flyer / Brochure</p><p class="text-xs text-gray-400">Official CFP poster (.pdf)</p></div><span class="iconify w-4 h-4 text-gray-300 group-hover:text-math-500 transition-colors shrink-0" data-icon="lucide:download"></span></a>
+                <a href="#" class="flex items-center gap-4 p-4 hover:bg-math-50/30 transition-colors group"><div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center shrink-0"><span class="iconify w-5 h-5 text-blue-500" data-icon="lucide:file-text"></span></div><div class="flex-1 min-w-0"><p class="text-sm font-semibold text-gray-800 group-hover:text-math-600 transition-colors">Paper Template</p><p class="text-xs text-gray-400">Single-column ICON-TechD format (.docx)</p></div><span class="iconify w-4 h-4 text-gray-300 group-hover:text-math-500 transition-colors shrink-0" data-icon="lucide:download"></span></a>
+                <a href="#" class="flex items-center gap-4 p-4 hover:bg-math-50/30 transition-colors group"><div class="w-10 h-10 bg-orange-50 rounded-lg flex items-center justify-center shrink-0"><span class="iconify w-5 h-5 text-orange-500" data-icon="lucide:presentation"></span></div><div class="flex-1 min-w-0"><p class="text-sm font-semibold text-gray-800 group-hover:text-math-600 transition-colors">Presentation Template</p><p class="text-xs text-gray-400">Official slide template (.pptx)</p></div><span class="iconify w-4 h-4 text-gray-300 group-hover:text-math-500 transition-colors shrink-0" data-icon="lucide:download"></span></a>
+                <a href="#" class="flex items-center gap-4 p-4 hover:bg-math-50/30 transition-colors group"><div class="w-10 h-10 bg-pink-50 rounded-lg flex items-center justify-center shrink-0"><span class="iconify w-5 h-5 text-pink-500" data-icon="lucide:file-key-2"></span></div><div class="flex-1 min-w-0"><p class="text-sm font-semibold text-gray-800 group-hover:text-math-600 transition-colors">Co-Host Proposal</p><p class="text-xs text-gray-400">Partnership proposal document (.pdf)</p></div><span class="iconify w-4 h-4 text-gray-300 group-hover:text-math-500 transition-colors shrink-0" data-icon="lucide:download"></span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== §13 FAQ ========== -->
+<section id="faq" class="py-24 lg:py-28 bg-white scroll-sec">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+            <p class="text-xs font-bold text-math-500 uppercase tracking-[.2em] mb-4">FAQ</p>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight mb-3">Frequently Asked Questions</h2>
+        </div>
+        <div class="max-w-3xl mx-auto space-y-2.5" id="faqList">
+            <div class="faq-item bg-white rounded-xl border border-gray-100 overflow-hidden"><button class="faq-btn w-full flex items-center justify-between p-5 text-left hover:bg-gray-50/50 transition-colors"><span class="text-sm font-semibold text-gray-800 pr-4">What is the format of the conference?</span><span class="iconify faq-chev w-5 h-5 text-gray-400 shrink-0" data-icon="lucide:chevron-down"></span></button><div class="faq-ans px-5 pb-0"><p class="text-sm text-gray-500 leading-relaxed pb-5">ICON-TechD 2026 is a fully virtual conference. All sessions — including keynote addresses and parallel paper presentations — will be conducted via Zoom. Participants can join from anywhere in the world.</p></div></div>
+            <div class="faq-item bg-white rounded-xl border border-gray-100 overflow-hidden"><button class="faq-btn w-full flex items-center justify-between p-5 text-left hover:bg-gray-50/50 transition-colors"><span class="text-sm font-semibold text-gray-800 pr-4">Can I submit a paper that has been published elsewhere?</span><span class="iconify faq-chev w-5 h-5 text-gray-400 shrink-0" data-icon="lucide:chevron-down"></span></button><div class="faq-ans px-5 pb-0"><p class="text-sm text-gray-500 leading-relaxed pb-5">No. All submitted papers must be original and unpublished. Papers under review at another journal or conference are also not eligible. Similarity index must be below 20% (checked via Turnitin).</p></div></div>
+            <div class="faq-item bg-white rounded-xl border border-gray-100 overflow-hidden"><button class="faq-btn w-full flex items-center justify-between p-5 text-left hover:bg-gray-50/50 transition-colors"><span class="text-sm font-semibold text-gray-800 pr-4">How does the Co-Host package work?</span><span class="iconify faq-chev w-5 h-5 text-gray-400 shrink-0" data-icon="lucide:chevron-down"></span></button><div class="faq-ans px-5 pb-0"><p class="text-sm text-gray-500 leading-relaxed pb-5">The Co-Host package (Rp 1,500,000) allows a partner campus to send 5 papers. The partner institution pays the package fee and distributes the 5 slots to their lecturers or students. Co-host institutions will be listed as official partners on the conference website and materials.</p></div></div>
+            <div class="faq-item bg-white rounded-xl border border-gray-100 overflow-hidden"><button class="faq-btn w-full flex items-center justify-between p-5 text-left hover:bg-gray-50/50 transition-colors"><span class="text-sm font-semibold text-gray-800 pr-4">What is the presentation format?</span><span class="iconify faq-chev w-5 h-5 text-gray-400 shrink-0" data-icon="lucide:chevron-down"></span></button><div class="faq-ans px-5 pb-0"><p class="text-sm text-gray-500 leading-relaxed pb-5">Each presenter gets 10 minutes for presentation + 5 minutes Q&A, all via Zoom with screen sharing. Use the official ICON-TechD PowerPoint template. A technical rehearsal session will be held in October. Poster presentation is available upon request.</p></div></div>
+            <div class="faq-item bg-white rounded-xl border border-gray-100 overflow-hidden"><button class="faq-btn w-full flex items-center justify-between p-5 text-left hover:bg-gray-50/50 transition-colors"><span class="text-sm font-semibold text-gray-800 pr-4">Where will accepted papers be published?</span><span class="iconify faq-chev w-5 h-5 text-gray-400 shrink-0" data-icon="lucide:chevron-down"></span></button><div class="faq-ans px-5 pb-0"><p class="text-sm text-gray-500 leading-relaxed pb-5">All accepted and presented papers will be published in the ICON-TechD 2026 Conference Proceedings (with ISBN). Selected papers may be recommended to SINTA-accredited or international (Scopus/WoS) journals, subject to additional review.</p></div></div>
+            <div class="faq-item bg-white rounded-xl border border-gray-100 overflow-hidden"><button class="faq-btn w-full flex items-center justify-between p-5 text-left hover:bg-gray-50/50 transition-colors"><span class="text-sm font-semibold text-gray-800 pr-4">Can undergraduate students submit papers?</span><span class="iconify faq-chev w-5 h-5 text-gray-400 shrink-0" data-icon="lucide:chevron-down"></span></button><div class="faq-ans px-5 pb-0"><p class="text-sm text-gray-500 leading-relaxed pb-5">Yes! We encourage undergraduate students, especially those working on final projects/theses, to submit. Internal ITB ASIA students (FTD) benefit from a special rate of Rp 200,000.</p></div></div>
+            <div class="faq-item bg-white rounded-xl border border-gray-100 overflow-hidden"><button class="faq-btn w-full flex items-center justify-between p-5 text-left hover:bg-gray-50/50 transition-colors"><span class="text-sm font-semibold text-gray-800 pr-4">Will I receive a certificate?</span><span class="iconify faq-chev w-5 h-5 text-gray-400 shrink-0" data-icon="lucide:chevron-down"></span></button><div class="faq-ans px-5 pb-0"><p class="text-sm text-gray-500 leading-relaxed pb-5">Yes. E-certificates will be issued to all presenters, keynote speakers, committee members, and registered observers. Certificates will be distributed digitally after the conference.</p></div></div>
+            <div class="faq-item bg-white rounded-xl border border-gray-100 overflow-hidden"><button class="faq-btn w-full flex items-center justify-between p-5 text-left hover:bg-gray-50/50 transition-colors"><span class="text-sm font-semibold text-gray-800 pr-4">What is the payment method?</span><span class="iconify faq-chev w-5 h-5 text-gray-400 shrink-0" data-icon="lucide:chevron-down"></span></button><div class="faq-ans px-5 pb-0"><p class="text-sm text-gray-500 leading-relaxed pb-5">Payment via bank transfer to the official ITB ASIA conference account. For international participants, SWIFT transfer details will be provided upon registration. Confirmation must be uploaded to OJS by the deadline.</p></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== §14 CONTACT ========== -->
+<section id="contact" class="py-24 lg:py-28 bg-gray-50/70 graph-paper scroll-sec">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-14">
+            <div>
+                <p class="text-xs font-bold text-math-500 uppercase tracking-[.2em] mb-4">Contact</p>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight mb-5">Contact Us</h2>
+                <p class="text-gray-500 leading-loose text-[15px] mb-9">Have questions about submission, registration, or partnership? We'd love to hear from you.</p>
+                <div class="space-y-5">
+                    <div class="flex items-start gap-3.5"><div class="w-11 h-11 bg-white rounded-xl flex items-center justify-center shrink-0 shadow-sm"><span class="iconify w-5 h-5 text-math-600" data-icon="lucide:mail"></span></div><div><p class="text-sm font-semibold text-gray-900 mb-0.5">Email</p><p class="text-sm text-gray-500">icontechd@asia.ac.id</p></div></div>
+                    <div class="flex items-start gap-3.5"><div class="w-11 h-11 bg-white rounded-xl flex items-center justify-center shrink-0 shadow-sm"><span class="iconify w-5 h-5 text-emerald-600" data-icon="lucide:message-circle"></span></div><div><p class="text-sm font-semibold text-gray-900 mb-0.5">WhatsApp</p><p class="text-sm text-gray-500">+62 XXX XXXX XXXX (Secretariat)</p></div></div>
+                    <div class="flex items-start gap-3.5"><div class="w-11 h-11 bg-white rounded-xl flex items-center justify-center shrink-0 shadow-sm"><span class="iconify w-5 h-5 text-math-600" data-icon="lucide:map-pin"></span></div><div><p class="text-sm font-semibold text-gray-900 mb-0.5">Address</p><p class="text-sm text-gray-500 leading-relaxed">Institut Teknologi dan Bisnis ASIA<br>Jl. Soekarno Hatta Rembuksari No. 1A<br>Malang, East Java, Indonesia</p></div></div>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl p-7 border border-gray-100">
+                <h3 class="font-serif font-bold text-gray-900 text-base mb-5">Send a Message</h3>
+                <form id="contactForm" class="space-y-4">
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div><label class="block text-[10px] font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Full Name</label><input type="text" class="w-full px-3.5 py-2.5 rounded-lg border border-gray-200 bg-gray-50/50 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-math-500/20 focus:border-math-400 transition-all" placeholder="Your name"></div>
+                        <div><label class="block text-[10px] font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Email</label><input type="email" class="w-full px-3.5 py-2.5 rounded-lg border border-gray-200 bg-gray-50/50 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-math-500/20 focus:border-math-400 transition-all" placeholder="your@email.com"></div>
+                    </div>
+                    <div><label class="block text-[10px] font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Subject</label><select class="w-full px-3.5 py-2.5 rounded-lg border border-gray-200 bg-gray-50/50 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-math-500/20 focus:border-math-400 transition-all"><option>General Inquiry</option><option>Submission Question</option><option>Registration Question</option><option>Co-Host Partnership</option><option>Publication Inquiry</option><option>Other</option></select></div>
+                    <div><label class="block text-[10px] font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Message</label><textarea rows="4" class="w-full px-3.5 py-2.5 rounded-lg border border-gray-200 bg-gray-50/50 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-math-500/20 focus:border-math-400 transition-all resize-none" placeholder="How can we help?"></textarea></div>
+                    <button type="submit" class="w-full bg-math-600 text-white font-semibold py-3 rounded-lg hover:bg-math-700 transition-colors shadow-md shadow-math-600/20 flex items-center justify-center gap-2 text-sm"><span class="iconify w-4 h-4" data-icon="lucide:send"></span>Send Message</button>
+                    <div id="formMsg" class="hidden text-center text-sm font-medium py-2 rounded-lg"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-14">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+            <div class="lg:col-span-2">
+                <div class="flex items-center gap-2.5 mb-4"><div class="w-9 h-9 bg-math-600 rounded-lg flex items-center justify-center"><span class="text-white font-serif font-bold text-base">I</span></div><div><span class="font-serif font-bold text-white text-base tracking-tight">ICON-TechD</span><span class="text-math-400 font-medium text-base ml-0.5">2026</span></div></div>
+                <p class="text-gray-400 text-sm leading-relaxed max-w-md mb-5">The 1st International Conference on Technology and Design — a fully virtual conference organized by the Faculty of Technology and Design, Institut Teknologi dan Bisnis ASIA Malang.</p>
+                <div class="flex gap-2.5">
+                    <a href="#" class="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center hover:bg-math-600 transition-colors"><span class="iconify w-4 h-4" data-icon="lucide:instagram"></span></a>
+                    <a href="#" class="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center hover:bg-math-600 transition-colors"><span class="iconify w-4 h-4" data-icon="lucide:facebook"></span></a>
+                    <a href="#" class="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center hover:bg-math-600 transition-colors"><span class="iconify w-4 h-4" data-icon="lucide:youtube"></span></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-serif font-bold text-sm mb-4">Quick Links</h4>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="#cfp" class="hover:text-math-400 transition-colors">Call for Papers</a></li>
+                    <li><a href="#submission" class="hover:text-math-400 transition-colors">Submission</a></li>
+                    <li><a href="#committee" class="hover:text-math-400 transition-colors">Committees</a></li>
+                    <li><a href="#program" class="hover:text-math-400 transition-colors">Program</a></li>
+                    <li><a href="#downloads" class="hover:text-math-400 transition-colors">Downloads</a></li>
+                    <li><a href="#faq" class="hover:text-math-400 transition-colors">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-serif font-bold text-sm mb-4">Organizer</h4>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li class="flex items-start gap-2"><span class="iconify w-3.5 h-3.5 mt-0.5 shrink-0 text-math-400" data-icon="lucide:building-2"></span>Faculty of Technology & Design</li>
+                    <li class="flex items-start gap-2"><span class="iconify w-3.5 h-3.5 mt-0.5 shrink-0 text-math-400" data-icon="lucide:map-pin"></span>ITB ASIA Malang, Indonesia</li>
+                    <li class="flex items-start gap-2"><span class="iconify w-3.5 h-3.5 mt-0.5 shrink-0 text-math-400" data-icon="lucide:mail"></span><a href="mailto:icontechd@asia.ac.id" class="hover:text-math-400 transition-colors">icontechd@asia.ac.id</a></li>
+                    <li class="flex items-start gap-2"><span class="iconify w-3.5 h-3.5 mt-0.5 shrink-0 text-math-400" data-icon="lucide:globe"></span><a href="https://asia.ac.id" target="_blank" class="hover:text-math-400 transition-colors">asia.ac.id</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-5 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <p class="text-[11px] text-gray-500">© 2026 ICON-TechD — Faculty of Technology & Design, ITB ASIA Malang. All rights reserved.</p>
+            <p class="text-[11px] text-gray-500">Designed with <span class="text-math-400">precision</span> and <span class="text-amber-400">creativity</span>.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scroll to Top -->
+<button id="scrollTop" class="fixed bottom-5 right-5 w-10 h-10 bg-math-600 text-white rounded-full shadow-lg shadow-math-600/30 flex items-center justify-center hover:bg-math-700 transition-all opacity-0 translate-y-4 pointer-events-none z-40"><span class="iconify w-5 h-5" data-icon="lucide:arrow-up"></span></button>
+
+<script>
+const mobBtn=document.getElementById('mobBtn'),mobMenu=document.getElementById('mobMenu');let mOpen=false;
+mobBtn.addEventListener('click',()=>{mOpen=!mOpen;mobMenu.classList.toggle('hidden',!mOpen);mobBtn.querySelector('.iconify').setAttribute('data-icon',mOpen?'lucide:x':'lucide:menu')});
+document.querySelectorAll('.mob-link').forEach(l=>l.addEventListener('click',()=>{mOpen=false;mobMenu.classList.add('hidden');mobBtn.querySelector('.iconify').setAttribute('data-icon','lucide:menu')}));
+const nav=document.getElementById('navbar');
+window.addEventListener('scroll',()=>{nav.classList.toggle('nav-scrolled',window.scrollY>50)});
+const stb=document.getElementById('scrollTop');
+window.addEventListener('scroll',()=>{if(window.scrollY>500){stb.classList.remove('opacity-0','translate-y-4','pointer-events-none');stb.classList.add('opacity-100','translate-y-0')}else{stb.classList.add('opacity-0','translate-y-4','pointer-events-none');stb.classList.remove('opacity-100','translate-y-0')}});
+stb.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+function updateCD(){const t=new Date('2026-11-14T08:00:00+07:00').getTime(),n=Date.now(),d=t-n;if(d<=0){document.getElementById('cd-d').textContent='000';document.getElementById('cd-h').textContent='00';document.getElementById('cd-m').textContent='00';document.getElementById('cd-s').textContent='00';return}document.getElementById('cd-d').textContent=String(Math.floor(d/864e5)).padStart(3,'0');document.getElementById('cd-h').textContent=String(Math.floor(d%864e5/36e5)).padStart(2,'0');document.getElementById('cd-m').textContent=String(Math.floor(d%36e5/6e4)).padStart(2,'0');document.getElementById('cd-s').textContent=String(Math.floor(d%6e4/1e3)).padStart(2,'0')}
+updateCD();setInterval(updateCD,1000);
+document.querySelectorAll('.stab').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.stab').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelectorAll('.sch-con').forEach(c=>c.classList.add('hidden'));document.getElementById('sch-'+b.dataset.sday).classList.remove('hidden')}));
+document.querySelectorAll('.ctab').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.ctab').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelectorAll('.ct-con').forEach(c=>{c.classList.add('hidden');c.style.animation='none';c.offsetHeight;c.style.animation=''});const t=document.getElementById('ct-'+b.dataset.ct);t.classList.remove('hidden');t.classList.add('sec-vis')}));
+document.querySelectorAll('.faq-btn').forEach(btn=>{btn.addEventListener('click',()=>{const ans=btn.nextElementSibling,chev=btn.querySelector('.faq-chev'),isOpen=ans.classList.contains('open');document.querySelectorAll('.faq-ans').forEach(a=>a.classList.remove('open'));document.querySelectorAll('.faq-chev').forEach(c=>c.classList.remove('open'));if(!isOpen){ans.classList.add('open');chev.classList.add('open')}})});
+document.getElementById('contactForm').addEventListener('submit',e=>{e.preventDefault();const m=document.getElementById('formMsg');m.classList.remove('hidden','bg-red-50','text-red-600');m.classList.add('bg-emerald-50','text-emerald-700');m.textContent='✓ Thank you! Your message has been sent.';e.target.reset();setTimeout(()=>m.classList.add('hidden'),5000)});
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('sec-vis');obs.unobserve(e.target)}})},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.scroll-sec').forEach(s=>{s.style.opacity='0';obs.observe(s)});
+</script>
+</body>
+</html>
