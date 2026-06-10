@@ -218,7 +218,7 @@
                 </div>
             </div>
             <div class="relative flex gap-5 sm:gap-7">
-                <div class="relative z-10 w-10 h-10 sm:w-14 sm:h-14 bg-gray-900 rounded-full flex items-center justify-center shrink-0 shadow-lg shadow-gray-900/20 ring-4 ring-math-100"><span class="text-white font-serif font-bold text-[10px] sm:text-xs leading-none text-center">Nov<br class="sm:hidden"> 14–15</span></div>
+                <div class="relative z-10 w-10 h-10 sm:w-14 sm:h-14 bg-gray-900 rounded-full flex items-center justify-center shrink-0 shadow-lg shadow-gray-900/20 ring-4 ring-math-100"><span class="text-white font-serif font-bold text-[10px] sm:text-xs leading-none text-center">Nov<br class="sm:hidden"> 18–19</span></div>
                 <div class="bg-math-600 rounded-xl p-5 shadow-lg shadow-math-600/20 flex-1 mt-0.5 sm:mt-1.5">
                     <h3 class="font-serif font-bold text-white text-base mb-1">Conference Days — November 18–19, 2026</h3>
                     <p class="text-sm text-math-100">Fully virtual. Plenary, keynote, and parallel sessions via Zoom. Closing ceremony.</p>
@@ -334,8 +334,8 @@
             <p class="text-gray-500 leading-loose text-[15px]">Two days of keynote addresses and parallel paper presentations — all sessions via Zoom.</p>
         </div>
         <div class="flex justify-center gap-2.5 mb-9">
-            <button class="stab active text-sm font-semibold px-5 py-2 rounded-lg border border-gray-200 text-gray-600" data-sday="d1">Day 1 — Nov 14</button>
-            <button class="stab text-sm font-semibold px-5 py-2 rounded-lg border border-gray-200 text-gray-600" data-sday="d2">Day 2 — Nov 15</button>
+            <button class="stab active text-sm font-semibold px-5 py-2 rounded-lg border border-gray-200 text-gray-600" data-sday="d1">Day 1 — Nov 18</button>
+            <button class="stab text-sm font-semibold px-5 py-2 rounded-lg border border-gray-200 text-gray-600" data-sday="d2">Day 2 — Nov 19</button>
         </div>
         <!-- Day 1 -->
         <div id="sch-d1" class="sch-con max-w-4xl mx-auto">
@@ -704,7 +704,7 @@ window.addEventListener('scroll',()=>{nav.classList.toggle('nav-scrolled',window
 const stb=document.getElementById('scrollTop');
 window.addEventListener('scroll',()=>{if(window.scrollY>500){stb.classList.remove('opacity-0','translate-y-4','pointer-events-none');stb.classList.add('opacity-100','translate-y-0')}else{stb.classList.add('opacity-0','translate-y-4','pointer-events-none');stb.classList.remove('opacity-100','translate-y-0')}});
 stb.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
-function updateCD(){const t=new Date('2026-11-14T08:00:00+07:00').getTime(),n=Date.now(),d=t-n;if(d<=0){document.getElementById('cd-d').textContent='000';document.getElementById('cd-h').textContent='00';document.getElementById('cd-m').textContent='00';document.getElementById('cd-s').textContent='00';return}document.getElementById('cd-d').textContent=String(Math.floor(d/864e5)).padStart(3,'0');document.getElementById('cd-h').textContent=String(Math.floor(d%864e5/36e5)).padStart(2,'0');document.getElementById('cd-m').textContent=String(Math.floor(d%36e5/6e4)).padStart(2,'0');document.getElementById('cd-s').textContent=String(Math.floor(d%6e4/1e3)).padStart(2,'0')}
+function updateCD(){const t=new Date('2026-11-18T08:00:00+07:00').getTime(),n=Date.now(),d=t-n;if(d<=0){document.getElementById('cd-d').textContent='000';document.getElementById('cd-h').textContent='00';document.getElementById('cd-m').textContent='00';document.getElementById('cd-s').textContent='00';return}document.getElementById('cd-d').textContent=String(Math.floor(d/864e5)).padStart(3,'0');document.getElementById('cd-h').textContent=String(Math.floor(d%864e5/36e5)).padStart(2,'0');document.getElementById('cd-m').textContent=String(Math.floor(d%36e5/6e4)).padStart(2,'0');document.getElementById('cd-s').textContent=String(Math.floor(d%6e4/1e3)).padStart(2,'0')}
 updateCD();setInterval(updateCD,1000);
 document.querySelectorAll('.stab').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.stab').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelectorAll('.sch-con').forEach(c=>c.classList.add('hidden'));document.getElementById('sch-'+b.dataset.sday).classList.remove('hidden')}));
 document.querySelectorAll('.ctab').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.ctab').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelectorAll('.ct-con').forEach(c=>{c.classList.add('hidden');c.style.animation='none';c.offsetHeight;c.style.animation=''});const t=document.getElementById('ct-'+b.dataset.ct);t.classList.remove('hidden');t.classList.add('sec-vis')}));
