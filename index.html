@@ -60,8 +60,9 @@
 <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
     <div class="max-w-7xl mx-auto px-5 lg:px-8">
         <div class="flex items-center justify-between h-18 lg:h-20">
+            <!-- FIX #2: Logo bigger on desktop, smaller on mobile. FIX #3: No white background -->
             <a href="#home" class="shrink-0">
-                <div class="w-11 h-11 rounded-xl flex items-center justify-center overflow-hidden bg-white shadow-sm"><img src="logo_icon_techd.png" alt="ICON-TechD" class="w-full h-full object-contain"></div>
+                <div class="w-9 h-9 sm:w-11 sm:h-11 lg:w-14 lg:h-14 rounded-xl flex items-center justify-center overflow-hidden"><img src="logo_icon_techd.png" alt="ICON-TechD" class="w-full h-full object-contain"></div>
             </a>
             <div class="hidden xl:flex items-center gap-1">
                 <a href="#home" class="text-[13px] font-medium text-gray-600 hover:text-math-600 transition-colors px-3 py-2 rounded-lg">Home</a>
@@ -145,8 +146,9 @@
                     <p class="anim-up d2 font-serif text-lg sm:text-xl text-gray-500 leading-relaxed mb-1" style="letter-spacing:.02em">International Conference on Technology and Design</p>
                     <p class="anim-up d2 text-sm sm:text-base text-gray-400 font-medium leading-relaxed max-w-xl mt-3">Empowering Creative Intelligence: Harmonizing Technology, Design, and Human Expression in the AI Era</p>
                 </div>
+                <!-- FIX #3: Hero logo card — no white bg, use subtle tinted bg instead -->
                 <div class="anim-up d2 hidden lg:flex items-center justify-center">
-                    <div class="w-[200px] h-[200px] rounded-2xl overflow-hidden bg-white shadow-xl shadow-math-900/5 border border-gray-100/80 p-5"><img src="logo_icon_techd.png" alt="ICON-TechD" class="w-full h-full object-contain"></div>
+                    <div class="w-[200px] h-[200px] rounded-2xl overflow-hidden bg-math-50/60 shadow-xl shadow-math-900/5 border border-math-100/80 p-5"><img src="logo_icon_techd.png" alt="ICON-TechD" class="w-full h-full object-contain"></div>
                 </div>
             </div>
             <div class="anim-up d3 flex flex-wrap items-center gap-3 sm:gap-4 text-sm text-gray-500 mb-9 mt-8">
@@ -197,9 +199,10 @@
                 <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl shadow-math-900/10">
                     <img src="https://picsum.photos/seed/icontechd-about2/800/600.jpg" alt="Conference" class="w-full h-full object-cover">
                 </div>
-                <div class="absolute -bottom-5 -left-5 bg-white rounded-xl shadow-lg shadow-gray-200/50 p-4 border border-gray-100">
+                <!-- FIX #3: About badge — no white bg, use subtle tinted bg -->
+                <div class="absolute -bottom-5 -left-5 bg-math-50/90 backdrop-blur-sm rounded-xl shadow-lg shadow-gray-200/50 p-4 border border-math-100/60">
                     <div class="flex items-center gap-3">
-                        <div class="w-9 h-9 bg-math-50 rounded-lg flex items-center justify-center overflow-hidden"><img src="logo_icon_techd.png" alt="ICON-TechD" class="w-full h-full object-contain"></div>
+                        <div class="w-9 h-9 bg-math-100/80 rounded-lg flex items-center justify-center overflow-hidden"><img src="logo_icon_techd.png" alt="ICON-TechD" class="w-full h-full object-contain"></div>
                         <div><p class="text-[10px] text-gray-400 font-medium">Organized by</p><p class="text-xs font-semibold text-gray-800">FTD — ITB ASIA Malang</p></div>
                     </div>
                 </div>
@@ -278,8 +281,9 @@
                 <div class="aspect-[4/3] bg-amber-50 flex items-center justify-center relative"><span class="iconify w-16 h-16 text-amber-200" data-icon="lucide:user-circle-2"></span><div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm rounded-full px-2.5 py-0.5 text-[10px] font-bold text-amber-600 uppercase tracking-wider">Philippines</div></div>
                 <div class="p-5"><h3 class="font-serif font-bold text-gray-400 text-sm">To Be Announced</h3><p class="text-amber-400 text-xs font-medium mt-1">Prominent Speaker from the Philippines</p></div>
             </div>
+            <!-- FIX #1: Changed from aspect-[4/3] to aspect-[3/4] portrait ratio so the full face is visible -->
             <div class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-100">
-                <div class="aspect-[4/3] relative overflow-hidden"><img src="https://scholars.ncu.edu.tw/files-asset/2141220905/wang-wei-ren.jpg" alt="Prof. Wei-Jen Wang" class="w-full h-full object-cover object-top"><div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm rounded-full px-2.5 py-0.5 text-[10px] font-bold text-violet-600 uppercase tracking-wider">Taiwan</div></div>
+                <div class="aspect-[3/4] relative overflow-hidden"><img src="https://scholars.ncu.edu.tw/files-asset/2141220905/wang-wei-ren.jpg" alt="Prof. Wei-Jen Wang" class="w-full h-full object-cover object-top"><div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm rounded-full px-2.5 py-0.5 text-[10px] font-bold text-violet-600 uppercase tracking-wider">Taiwan</div></div>
                 <div class="p-5"><h3 class="font-serif font-bold text-gray-900 text-sm">Prof. Wei-Jen Wang</h3><p class="text-violet-600 text-xs font-medium mt-1">National Central University, Taiwan</p></div>
             </div>
         </div>
@@ -435,7 +439,7 @@
                     <div class="flex items-center gap-3 p-4 rounded-lg bg-gray-50/50 border border-gray-100 border-dashed"><div class="w-10 h-10 rounded-full bg-math-100 flex items-center justify-center shrink-0 text-xs font-bold text-math-600">ID</div><div><p class="text-sm font-medium text-gray-400 italic">Keynote Speaker — Indonesia</p><p class="text-xs text-gray-300">To be announced</p></div></div>
                     <div class="flex items-center gap-3 p-4 rounded-lg bg-gray-50/50 border border-gray-100 border-dashed"><div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center shrink-0 text-xs font-bold text-emerald-600">MY</div><div><p class="text-sm font-medium text-gray-400 italic">Keynote Speaker — Malaysia</p><p class="text-xs text-gray-300">To be announced</p></div></div>
                     <div class="flex items-center gap-3 p-4 rounded-lg bg-gray-50/50 border border-gray-100 border-dashed"><div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center shrink-0 text-xs font-bold text-amber-600">PH</div><div><p class="text-sm font-medium text-gray-400 italic">Keynote Speaker — Philippines</p><p class="text-xs text-gray-300">To be announced</p></div></div>
-                    <div class="flex items-center gap-3 p-4 rounded-lg bg-gray-50/50 border border-gray-100"><div class="w-10 h-10 rounded-full bg-violet-100 flex items-center justify-center shrink-0 text-xs font-bold text-violet-600 overflow-hidden"><img src="https://scholars.ncu.edu.tw/files-asset/2141220905/wang-wei-ren.jpg" alt="WW" class="w-full h-full object-cover"></div><div><p class="text-sm font-semibold text-gray-800">Prof. Wei-Jen Wang</p><p class="text-xs text-gray-400">National Central University, Taiwan</p></div></div>
+                    <div class="flex items-center gap-3 p-4 rounded-lg bg-gray-50/50 border border-gray-100"><div class="w-10 h-10 rounded-full bg-violet-100 flex items-center justify-center shrink-0 overflow-hidden"><img src="https://scholars.ncu.edu.tw/files-asset/2141220905/wang-wei-ren.jpg" alt="WW" class="w-full h-full object-cover object-top"></div><div><p class="text-sm font-semibold text-gray-800">Prof. Wei-Jen Wang</p><p class="text-xs text-gray-400">National Central University, Taiwan</p></div></div>
                 </div>
             </div>
         </div>
@@ -672,11 +676,21 @@
 </section>
 
 <!-- ========== FOOTER ========== -->
+<!-- FIX #4: Restructured footer — proper nesting, logo with white bg only here, clean 4-col grid -->
 <footer class="bg-gray-900 text-white">
     <div class="max-w-7xl mx-auto px-5 lg:px-8 py-14">
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
-            <div class="lg:col-span-2">
-                <div class="flex items-center gap-3 mb-4"><div class="w-10 h-10 rounded-lg flex items-center justify-center overflow-hidden bg-white"><img src="logo_icon_techd.png" alt="ICON-TechD" class="w-full h-full object-contain"></div></div><div><span class="font-serif font-bold text-white text-base tracking-tight">ICON-TechD</span><span class="text-math-400 font-medium text-base ml-0.5">2026</span></div></div>
+            <!-- Col 1: Logo & Description -->
+            <div class="sm:col-span-2 lg:col-span-2">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center overflow-hidden bg-white shrink-0">
+                        <img src="logo_icon_techd.png" alt="ICON-TechD" class="w-full h-full object-contain">
+                    </div>
+                    <div>
+                        <span class="font-serif font-bold text-white text-base tracking-tight">ICON-TechD</span>
+                        <span class="text-math-400 font-medium text-base ml-0.5">2026</span>
+                    </div>
+                </div>
                 <p class="text-gray-400 text-sm leading-relaxed max-w-md mb-5">The 1st International Conference on Technology and Design — a fully virtual conference organized by the Faculty of Technology and Design, Institut Teknologi dan Bisnis ASIA Malang.</p>
                 <div class="flex gap-2.5">
                     <a href="#" class="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center hover:bg-math-600 transition-colors"><span class="iconify w-4 h-4" data-icon="lucide:instagram"></span></a>
@@ -684,6 +698,7 @@
                     <a href="#" class="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center hover:bg-math-600 transition-colors"><span class="iconify w-4 h-4" data-icon="lucide:youtube"></span></a>
                 </div>
             </div>
+            <!-- Col 2: Quick Links -->
             <div>
                 <h4 class="font-serif font-bold text-sm mb-4">Quick Links</h4>
                 <ul class="space-y-2 text-sm text-gray-400">
@@ -696,6 +711,7 @@
                     <li><a href="#faq" class="hover:text-math-400 transition-colors">FAQ</a></li>
                 </ul>
             </div>
+            <!-- Col 3: Organizer -->
             <div>
                 <h4 class="font-serif font-bold text-sm mb-4">Organizer</h4>
                 <ul class="space-y-2 text-sm text-gray-400">
