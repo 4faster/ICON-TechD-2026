@@ -49,6 +49,8 @@
         .faq-ans.open{max-height:300px}
         .faq-chev{transition:transform .3s ease}
         .faq-chev.open{transform:rotate(180deg)}
+        .nav-dd{opacity:0;visibility:hidden;transform:translateY(8px);transition:all .2s ease;pointer-events:none}
+        .nav-dd-wrap:hover .nav-dd{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}
         ::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:#f1f5f9}::-webkit-scrollbar-thumb{background:#93c5fd;border-radius:3px}::-webkit-scrollbar-thumb:hover{background:#3b82f6}
     </style>
 </head>
@@ -58,24 +60,41 @@
 <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
     <div class="max-w-7xl mx-auto px-5 lg:px-8">
         <div class="flex items-center justify-between h-18 lg:h-20">
-            <a href="#home" class="flex items-center gap-2.5 shrink-0">
-                <div class="w-9 h-9 rounded-lg flex items-center justify-center overflow-hidden bg-white"><img src="logo_icon_techd.png" alt="ICON-TechD" class="w-full h-full object-contain"></div>
-                <div class="leading-none">
-                    <span class="font-serif font-bold text-math-800 text-base tracking-tight">ICON-TechD</span>
-                    <span class="text-math-400 font-medium text-base ml-0.5">2026</span>
-                </div>
+            <a href="#home" class="shrink-0">
+                <div class="w-11 h-11 rounded-xl flex items-center justify-center overflow-hidden bg-white shadow-sm"><img src="logo_icon_techd.png" alt="ICON-TechD" class="w-full h-full object-contain"></div>
             </a>
-            <div class="hidden xl:flex items-center gap-5 lg:gap-6">
-                <a href="#home" class="text-[13px] font-medium text-gray-600 hover:text-math-600 transition-colors">Home</a>
-                <a href="#cfp" class="text-[13px] font-medium text-gray-600 hover:text-math-600 transition-colors">Call for Papers</a>
-                <a href="#committee" class="text-[13px] font-medium text-gray-600 hover:text-math-600 transition-colors">Committees</a>
-                <a href="#submission" class="text-[13px] font-medium text-gray-600 hover:text-math-600 transition-colors">Submission & Registration</a>
-                <a href="#speakers" class="text-[13px] font-medium text-gray-600 hover:text-math-600 transition-colors">Speakers</a>
-                <a href="#program" class="text-[13px] font-medium text-gray-600 hover:text-math-600 transition-colors">Program</a>
-                <a href="#venue" class="text-[13px] font-medium text-gray-600 hover:text-math-600 transition-colors">Venue</a>
-                <a href="#downloads" class="text-[13px] font-medium text-gray-600 hover:text-math-600 transition-colors">Downloads</a>
-                <a href="#faq" class="text-[13px] font-medium text-gray-600 hover:text-math-600 transition-colors">FAQ</a>
-                <a href="#contact" class="text-[13px] font-medium text-gray-600 hover:text-math-600 transition-colors">Contact</a>
+            <div class="hidden xl:flex items-center gap-1">
+                <a href="#home" class="text-[13px] font-medium text-gray-600 hover:text-math-600 transition-colors px-3 py-2 rounded-lg">Home</a>
+                <div class="nav-dd-wrap relative">
+                    <button class="flex items-center gap-1 text-[13px] font-medium text-gray-600 hover:text-math-600 transition-colors px-3 py-2 rounded-lg">Conference <span class="iconify w-3.5 h-3.5 text-gray-400" data-icon="lucide:chevron-down"></span></button>
+                    <div class="nav-dd absolute top-full left-0 pt-2">
+                        <div class="bg-white rounded-xl shadow-xl shadow-gray-200/50 border border-gray-100 py-2 min-w-[210px] backdrop-blur-xl">
+                            <a href="#about" class="mob-link block px-4 py-2 text-[13px] text-gray-600 hover:text-math-600 hover:bg-math-50/50 transition-colors">About</a>
+                            <a href="#speakers" class="mob-link block px-4 py-2 text-[13px] text-gray-600 hover:text-math-600 hover:bg-math-50/50 transition-colors">Keynote Speakers</a>
+                            <a href="#program" class="mob-link block px-4 py-2 text-[13px] text-gray-600 hover:text-math-600 hover:bg-math-50/50 transition-colors">Program</a>
+                            <a href="#committee" class="mob-link block px-4 py-2 text-[13px] text-gray-600 hover:text-math-600 hover:bg-math-50/50 transition-colors">Committees</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-dd-wrap relative">
+                    <button class="flex items-center gap-1 text-[13px] font-medium text-gray-600 hover:text-math-600 transition-colors px-3 py-2 rounded-lg">Papers <span class="iconify w-3.5 h-3.5 text-gray-400" data-icon="lucide:chevron-down"></span></button>
+                    <div class="nav-dd absolute top-full left-0 pt-2">
+                        <div class="bg-white rounded-xl shadow-xl shadow-gray-200/50 border border-gray-100 py-2 min-w-[230px] backdrop-blur-xl">
+                            <a href="#cfp" class="mob-link block px-4 py-2 text-[13px] text-gray-600 hover:text-math-600 hover:bg-math-50/50 transition-colors">Call for Papers</a>
+                            <a href="#submission" class="mob-link block px-4 py-2 text-[13px] text-gray-600 hover:text-math-600 hover:bg-math-50/50 transition-colors">Submission & Registration</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-dd-wrap relative">
+                    <button class="flex items-center gap-1 text-[13px] font-medium text-gray-600 hover:text-math-600 transition-colors px-3 py-2 rounded-lg">Resources <span class="iconify w-3.5 h-3.5 text-gray-400" data-icon="lucide:chevron-down"></span></button>
+                    <div class="nav-dd absolute top-full left-0 pt-2">
+                        <div class="bg-white rounded-xl shadow-xl shadow-gray-200/50 border border-gray-100 py-2 min-w-[180px] backdrop-blur-xl">
+                            <a href="#downloads" class="mob-link block px-4 py-2 text-[13px] text-gray-600 hover:text-math-600 hover:bg-math-50/50 transition-colors">Downloads</a>
+                            <a href="#faq" class="mob-link block px-4 py-2 text-[13px] text-gray-600 hover:text-math-600 hover:bg-math-50/50 transition-colors">FAQ</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#contact" class="text-[13px] font-medium text-gray-600 hover:text-math-600 transition-colors px-3 py-2 rounded-lg">Contact</a>
             </div>
             <a href="https://conference.asia.ac.id/index.php/icontech/user/register" target="_blank" class="hidden xl:inline-flex items-center gap-1.5 bg-math-600 text-white text-[13px] font-semibold px-5 py-2 rounded-lg hover:bg-math-700 transition-colors shadow-md shadow-math-600/20">Register</a>
             <button id="mobBtn" class="xl:hidden p-2 text-gray-600 hover:text-math-600 transition-colors"><span class="iconify w-6 h-6" data-icon="lucide:menu"></span></button>
@@ -84,14 +103,17 @@
     <div id="mobMenu" class="hidden xl:hidden bg-white/95 backdrop-blur-xl border-t border-gray-100 shadow-xl max-h-[80vh] overflow-y-auto">
         <div class="px-5 py-3 space-y-0.5">
             <a href="#home" class="mob-link block py-2.5 text-sm font-medium text-gray-600 hover:text-math-600 hover:bg-math-50/50 px-3 rounded-lg">Home</a>
-            <a href="#cfp" class="mob-link block py-2.5 text-sm font-medium text-gray-600 hover:text-math-600 hover:bg-math-50/50 px-3 rounded-lg">Call for Papers</a>
-            <a href="#committee" class="mob-link block py-2.5 text-sm font-medium text-gray-600 hover:text-math-600 hover:bg-math-50/50 px-3 rounded-lg">Committees</a>
-            <a href="#submission" class="mob-link block py-2.5 text-sm font-medium text-gray-600 hover:text-math-600 hover:bg-math-50/50 px-3 rounded-lg">Submission & Registration</a>
-            <a href="#speakers" class="mob-link block py-2.5 text-sm font-medium text-gray-600 hover:text-math-600 hover:bg-math-50/50 px-3 rounded-lg">Speakers</a>
-            <a href="#program" class="mob-link block py-2.5 text-sm font-medium text-gray-600 hover:text-math-600 hover:bg-math-50/50 px-3 rounded-lg">Program & Schedule</a>
-            <a href="#venue" class="mob-link block py-2.5 text-sm font-medium text-gray-600 hover:text-math-600 hover:bg-math-50/50 px-3 rounded-lg">Venue</a>
-            <a href="#downloads" class="mob-link block py-2.5 text-sm font-medium text-gray-600 hover:text-math-600 hover:bg-math-50/50 px-3 rounded-lg">Downloads Center</a>
-            <a href="#faq" class="mob-link block py-2.5 text-sm font-medium text-gray-600 hover:text-math-600 hover:bg-math-50/50 px-3 rounded-lg">FAQ</a>
+            <div class="pt-2 pb-1 px-3"><p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Conference</p></div>
+            <a href="#about" class="mob-link block py-2.5 text-sm font-medium text-gray-600 hover:text-math-600 hover:bg-math-50/50 px-3 rounded-lg pl-5">About</a>
+            <a href="#speakers" class="mob-link block py-2.5 text-sm font-medium text-gray-600 hover:text-math-600 hover:bg-math-50/50 px-3 rounded-lg pl-5">Keynote Speakers</a>
+            <a href="#program" class="mob-link block py-2.5 text-sm font-medium text-gray-600 hover:text-math-600 hover:bg-math-50/50 px-3 rounded-lg pl-5">Program</a>
+            <a href="#committee" class="mob-link block py-2.5 text-sm font-medium text-gray-600 hover:text-math-600 hover:bg-math-50/50 px-3 rounded-lg pl-5">Committees</a>
+            <div class="pt-2 pb-1 px-3"><p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Papers</p></div>
+            <a href="#cfp" class="mob-link block py-2.5 text-sm font-medium text-gray-600 hover:text-math-600 hover:bg-math-50/50 px-3 rounded-lg pl-5">Call for Papers</a>
+            <a href="#submission" class="mob-link block py-2.5 text-sm font-medium text-gray-600 hover:text-math-600 hover:bg-math-50/50 px-3 rounded-lg pl-5">Submission & Registration</a>
+            <div class="pt-2 pb-1 px-3"><p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Resources</p></div>
+            <a href="#downloads" class="mob-link block py-2.5 text-sm font-medium text-gray-600 hover:text-math-600 hover:bg-math-50/50 px-3 rounded-lg pl-5">Downloads</a>
+            <a href="#faq" class="mob-link block py-2.5 text-sm font-medium text-gray-600 hover:text-math-600 hover:bg-math-50/50 px-3 rounded-lg pl-5">FAQ</a>
             <a href="#contact" class="mob-link block py-2.5 text-sm font-medium text-gray-600 hover:text-math-600 hover:bg-math-50/50 px-3 rounded-lg">Contact</a>
             <a href="https://conference.asia.ac.id/index.php/icontech/user/register" target="_blank" class="block text-center bg-math-600 text-white text-sm font-semibold px-5 py-2.5 rounded-lg mt-2">Register Now</a>
         </div>
@@ -111,8 +133,9 @@
     </div>
     <div class="max-w-7xl mx-auto px-5 lg:px-8 py-32 lg:py-0 w-full">
         <div class="max-w-2xl relative z-10">
-            <div class="anim-up">
-                <div class="inline-flex items-center gap-2 bg-math-50 border border-math-200/60 rounded-full px-4 py-1.5 mb-7">
+            <div class="anim-up mb-7">
+                <div class="w-20 h-20 rounded-2xl overflow-hidden bg-white shadow-lg shadow-math-900/5 mb-6 border border-gray-100/80"><img src="logo_icon_techd.png" alt="ICON-TechD" class="w-full h-full object-contain"></div>
+                <div class="inline-flex items-center gap-2 bg-math-50 border border-math-200/60 rounded-full px-4 py-1.5">
                     <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                     <span class="text-xs font-semibold text-math-700 tracking-wider uppercase">Call for Papers Open</span>
                 </div>
@@ -309,7 +332,6 @@
                 </div>
             </div>
         </div>
-        <!-- Publication Output -->
         <div class="mt-14 max-w-3xl mx-auto">
             <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
                 <h3 class="font-serif font-bold text-gray-900 text-lg mb-3 flex items-center gap-2"><span class="iconify w-5 h-5 text-math-500" data-icon="lucide:book-open"></span>Publication Output</h3>
@@ -336,7 +358,6 @@
             <button class="stab active text-sm font-semibold px-5 py-2 rounded-lg border border-gray-200 text-gray-600" data-sday="d1">Day 1 — Nov 18</button>
             <button class="stab text-sm font-semibold px-5 py-2 rounded-lg border border-gray-200 text-gray-600" data-sday="d2">Day 2 — Nov 19</button>
         </div>
-        <!-- Day 1 -->
         <div id="sch-d1" class="sch-con max-w-4xl mx-auto">
             <div class="space-y-0">
                 <div class="flex gap-4 sm:gap-6 py-4 border-b border-gray-100"><div class="w-[72px] sm:w-24 shrink-0 text-xs font-mono font-semibold text-math-600 pt-0.5">08:00–08:30</div><div><h4 class="font-semibold text-gray-900 text-sm">Participant Check-in</h4><p class="text-xs text-gray-400 mt-0.5">Zoom lobby opens</p></div></div>
@@ -352,7 +373,6 @@
                 <div class="flex gap-4 sm:gap-6 py-4 bg-math-600 rounded-xl mt-2 -mx-3 px-3 sm:-mx-5 sm:px-5"><div class="w-[72px] sm:w-24 shrink-0 text-xs font-mono font-semibold text-white pt-0.5">17:00–17:30</div><div><span class="text-[10px] font-bold text-math-200 uppercase tracking-wider bg-math-500 px-2 py-0.5 rounded">Closing</span><h4 class="font-semibold text-white text-sm mt-1">Closing Ceremony</h4><p class="text-xs text-math-200 mt-0.5">Closing remarks and certificate distribution</p></div></div>
             </div>
         </div>
-        <!-- Day 2 -->
         <div id="sch-d2" class="sch-con hidden max-w-4xl mx-auto">
             <div class="bg-gray-50/80 rounded-2xl border border-gray-200 border-dashed p-10 text-center">
                 <span class="iconify w-10 h-10 text-gray-300 mx-auto mb-3" data-icon="lucide:calendar-off"></span>
@@ -360,14 +380,12 @@
                 <p class="text-sm text-gray-400 max-w-lg mx-auto leading-relaxed">November 19, 2026 is reserved as a buffer day and will only be used if additional session time is needed. Otherwise, no sessions are scheduled on this day.</p>
             </div>
         </div>
-        <!-- Presentation Guidelines -->
         <div class="max-w-4xl mx-auto mt-8">
             <div class="bg-amber-50/60 border border-amber-200/50 rounded-xl p-5 flex items-start gap-3">
                 <span class="iconify w-5 h-5 text-amber-600 mt-0.5 shrink-0" data-icon="lucide:info"></span>
                 <div><h4 class="font-semibold text-gray-900 text-sm mb-1">Presentation Guidelines</h4><ul class="text-xs text-gray-600 leading-relaxed space-y-0.5"><li>• Each presenter: <strong>10 minutes</strong> presentation + <strong>5 minutes</strong> Q&A via Zoom.</li><li>• Use the official ICON-TechD 2026 PowerPoint template (see Downloads Center).</li><li>• All presenters must join via Zoom with screen sharing enabled.</li></ul></div>
             </div>
         </div>
-        <!-- Accepted Papers Placeholder -->
         <div class="max-w-4xl mx-auto mt-8">
             <div class="bg-gray-50/50 rounded-xl border border-gray-100 p-10 text-center">
                 <span class="iconify w-10 h-10 text-gray-300 mx-auto mb-3" data-icon="lucide:file-stack"></span>
@@ -394,7 +412,6 @@
             <button class="ctab text-sm font-semibold px-4 py-2 rounded-lg border border-gray-200 text-gray-600" data-ct="creative">Creative & Event</button>
             <button class="ctab text-sm font-semibold px-4 py-2 rounded-lg border border-gray-200 text-gray-600" data-ct="sponsor">Sponsor & Partnership</button>
         </div>
-        <!-- Steering -->
         <div id="ct-steering" class="ct-con">
             <div class="grid sm:grid-cols-3 gap-5 max-w-3xl mx-auto">
                 <div class="text-center p-6 rounded-xl bg-white border border-gray-100"><div class="w-16 h-16 rounded-full bg-math-100 mx-auto mb-3 flex items-center justify-center"><span class="iconify w-7 h-7 text-math-500" data-icon="lucide:shield-check"></span></div><h4 class="font-serif font-bold text-gray-900 text-sm">Risa Santoso, B.A, M.Ed</h4></div>
@@ -402,7 +419,6 @@
                 <div class="text-center p-6 rounded-xl bg-white border border-gray-100"><div class="w-16 h-16 rounded-full bg-math-100 mx-auto mb-3 flex items-center justify-center"><span class="iconify w-7 h-7 text-math-500" data-icon="lucide:shield-check"></span></div><h4 class="font-serif font-bold text-gray-900 text-sm">Handry Rochmad Dwi Happy, S.Sn., M.Sn.</h4><p class="text-math-600 text-xs font-medium mt-1">Dean, FTD</p></div>
             </div>
         </div>
-        <!-- International Advisory -->
         <div id="ct-advisory" class="ct-con hidden">
             <div class="bg-white rounded-2xl border border-gray-100 p-7 max-w-4xl mx-auto">
                 <p class="text-sm text-gray-500 leading-relaxed mb-5">The International Advisory Board comprises distinguished scholars from partner institutions across four countries, ensuring the conference meets international academic standards.</p>
@@ -417,7 +433,6 @@
                 </div>
             </div>
         </div>
-        <!-- Technical Program -->
         <div id="ct-technical" class="ct-con hidden">
             <div class="bg-math-50/50 border border-math-100 rounded-xl p-5 mb-7 text-center max-w-4xl mx-auto"><p class="text-[10px] font-bold text-math-500 uppercase tracking-widest mb-1">Coordinator</p><h4 class="font-serif font-bold text-gray-900">Dr. Danang Arbian Sulistyo</h4></div>
             <div class="grid sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -426,7 +441,6 @@
                 <div><div class="flex items-center gap-2 mb-3"><div class="w-2.5 h-2.5 rounded-full bg-amber-500"></div><h4 class="font-serif font-bold text-amber-800 text-sm">Track 3 — VCD</h4></div><div class="space-y-2.5"><div class="bg-white rounded-lg p-3.5 border border-gray-100"><p class="text-sm font-medium text-gray-800">Faldi Hendrawan, S.Pd, M.A.</p></div><div class="bg-white rounded-lg p-3.5 border border-gray-100"><p class="text-sm font-medium text-gray-800">Yogi Widya Saka Warsa, S.Sn, M.Sn</p></div><div class="bg-white rounded-lg p-3.5 border border-gray-100"><p class="text-sm font-medium text-gray-800">Nicholaus Wayong Kabelen, S.Sn, M.Sn</p></div></div></div>
             </div>
         </div>
-        <!-- Secretariat -->
         <div id="ct-secretariat" class="ct-con hidden">
             <div class="bg-emerald-50/50 border border-emerald-100 rounded-xl p-5 mb-7 text-center max-w-4xl mx-auto"><p class="text-[10px] font-bold text-emerald-500 uppercase tracking-widest mb-1">Coordinator</p><h4 class="font-serif font-bold text-gray-900">Philip Faster E.A, S.Pd, M.Kom, Ph.D</h4></div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-4xl mx-auto">
@@ -436,7 +450,6 @@
                 <div class="text-center p-5 rounded-xl bg-white border border-gray-100"><div class="w-14 h-14 rounded-full bg-emerald-100 mx-auto mb-3 flex items-center justify-center"><span class="iconify w-6 h-6 text-emerald-500" data-icon="lucide:layout-list"></span></div><p class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest mb-1">Administration</p><h4 class="font-serif font-bold text-gray-900 text-sm">Jaenal Arifin, S.Kom, M.M., M.Kom</h4></div>
             </div>
         </div>
-        <!-- Creative -->
         <div id="ct-creative" class="ct-con hidden">
             <div class="grid sm:grid-cols-3 gap-5 max-w-4xl mx-auto">
                 <div class="text-center p-6 rounded-xl bg-white border border-gray-100"><div class="w-14 h-14 rounded-full bg-amber-100 mx-auto mb-3 flex items-center justify-center"><span class="iconify w-6 h-6 text-amber-500" data-icon="lucide:pen-tool"></span></div><p class="text-[10px] font-bold text-amber-600 uppercase tracking-widest mb-1">Branding & Visual</p><h4 class="font-serif font-bold text-gray-900 text-sm">Abdulloh Eizzi Irsyada, S.Kom, M.Ds</h4></div>
@@ -444,7 +457,6 @@
                 <div class="text-center p-6 rounded-xl bg-white border border-gray-100"><div class="w-14 h-14 rounded-full bg-amber-100 mx-auto mb-3 flex items-center justify-center"><span class="iconify w-6 h-6 text-amber-500" data-icon="lucide:clapperboard"></span></div><p class="text-[10px] font-bold text-amber-600 uppercase tracking-widest mb-1">Event & Rundown</p><h4 class="font-serif font-bold text-gray-900 text-xs leading-snug">Nur Lailatul Aqormy, S.S., M.A<br>Sean Elbert Jeremiah, S.Sn., M.Pd<br>Nadien Adha Safira, S.Pd.</h4></div>
             </div>
         </div>
-        <!-- Sponsor -->
         <div id="ct-sponsor" class="ct-con hidden">
             <div class="bg-violet-50/50 border border-violet-100 rounded-xl p-5 mb-7 text-center max-w-4xl mx-auto"><p class="text-[10px] font-bold text-violet-500 uppercase tracking-widest mb-1">PIC</p><h4 class="font-serif font-bold text-gray-900">Ida Wahyuni, S.Kom, M.Kom, Ph.D</h4></div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 max-w-5xl mx-auto">
@@ -525,7 +537,6 @@
                     </div>
                     <div class="px-4 py-3 border-t border-gray-100"><p class="text-[10px] text-gray-400 text-center">Presenter fees include e-certificate and proceedings access.</p></div>
                 </div>
-                <!-- OJS Portal Link -->
                 <a href="https://conference.asia.ac.id/index.php/icontech/" target="_blank" class="block bg-math-50/50 rounded-2xl border border-math-100 overflow-hidden hover:bg-math-100/50 transition-colors group">
                     <div class="p-5 flex items-center justify-between">
                         <div class="flex items-center gap-3">
@@ -659,7 +670,7 @@
     <div class="max-w-7xl mx-auto px-5 lg:px-8 py-14">
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
             <div class="lg:col-span-2">
-                <div class="flex items-center gap-2.5 mb-4"><div class="w-9 h-9 rounded-lg flex items-center justify-center overflow-hidden bg-white"><img src="logo_icon_techd.png" alt="ICON-TechD" class="w-full h-full object-contain"></div><div><span class="font-serif font-bold text-white text-base tracking-tight">ICON-TechD</span><span class="text-math-400 font-medium text-base ml-0.5">2026</span></div></div>
+                <div class="flex items-center gap-3 mb-4"><div class="w-10 h-10 rounded-lg flex items-center justify-center overflow-hidden bg-white"><img src="logo_icon_techd.png" alt="ICON-TechD" class="w-full h-full object-contain"></div><div><span class="font-serif font-bold text-white text-base tracking-tight">ICON-TechD</span><span class="text-math-400 font-medium text-base ml-0.5">2026</span></div></div>
                 <p class="text-gray-400 text-sm leading-relaxed max-w-md mb-5">The 1st International Conference on Technology and Design — a fully virtual conference organized by the Faculty of Technology and Design, Institut Teknologi dan Bisnis ASIA Malang.</p>
                 <div class="flex gap-2.5">
                     <a href="#" class="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center hover:bg-math-600 transition-colors"><span class="iconify w-4 h-4" data-icon="lucide:instagram"></span></a>
@@ -670,10 +681,12 @@
             <div>
                 <h4 class="font-serif font-bold text-sm mb-4">Quick Links</h4>
                 <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="#about" class="hover:text-math-400 transition-colors">About</a></li>
                     <li><a href="#cfp" class="hover:text-math-400 transition-colors">Call for Papers</a></li>
-                    <li><a href="#submission" class="hover:text-math-400 transition-colors">Submission</a></li>
-                    <li><a href="#committee" class="hover:text-math-400 transition-colors">Committees</a></li>
+                    <li><a href="#speakers" class="hover:text-math-400 transition-colors">Speakers</a></li>
                     <li><a href="#program" class="hover:text-math-400 transition-colors">Program</a></li>
+                    <li><a href="#committee" class="hover:text-math-400 transition-colors">Committees</a></li>
+                    <li><a href="#submission" class="hover:text-math-400 transition-colors">Submission</a></li>
                     <li><a href="#downloads" class="hover:text-math-400 transition-colors">Downloads</a></li>
                     <li><a href="#faq" class="hover:text-math-400 transition-colors">FAQ</a></li>
                 </ul>
@@ -697,7 +710,6 @@
     </div>
 </footer>
 
-<!-- Scroll to Top -->
 <button id="scrollTop" class="fixed bottom-5 right-5 w-10 h-10 bg-math-600 text-white rounded-full shadow-lg shadow-math-600/30 flex items-center justify-center hover:bg-math-700 transition-all opacity-0 translate-y-4 pointer-events-none z-40"><span class="iconify w-5 h-5" data-icon="lucide:arrow-up"></span></button>
 
 <script>
